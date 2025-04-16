@@ -4,7 +4,8 @@
 
 { config, pkgs, lib, ... }: {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./modules/hardware-configuration.nix
       ./modules/sddm.nix
       ./modules/packages.nix
@@ -15,7 +16,7 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -31,7 +32,7 @@
   time.timeZone = "America/Sao_Paulo";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "pt_BR.UTF-8";
+  i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "pt_BR.UTF-8";
@@ -61,7 +62,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
     ignoreShellProgramCheck = true;
-    packages = with pkgs; [];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages
@@ -69,7 +70,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -79,15 +80,15 @@
   # };
 
   # List services that you want to enable:
-  
+
   # Pipewire
   services.pipewire = {
-      enable = true; # if not already enabled
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-      # If you want to use JACK applications, uncomment this
-      #jack.enable = true;
+    enable = true; # if not already enabled
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    # If you want to use JACK applications, uncomment this
+    #jack.enable = true;
   };
 
   # Hyprland
@@ -101,22 +102,28 @@
     enable = true;
     videoDrivers = [ "modesetting" ];
     deviceSection = ''
-	    Option "AccelMethod" "none"
+      	    Option "AccelMethod" "none"
     '';
   };
+
+  # Enable OpenTabletDriver
+  hardware.opentabletdriver.enable = true;
 
   # Sddm
   services.displayManager.sddm = {
     enable = true;
     theme = "sugar-candy";
-  };
+  };    
 
   security = {
-      pam.services.kwallet = {
-          name = "kwallet";
-          enableKwallet = true;
-      };
+    pam.services.kwallet = {
+      name = "kwallet";
+      enableKwallet = true;
+    };
   };
+
+  # Docker
+  virtualisation.docker.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;

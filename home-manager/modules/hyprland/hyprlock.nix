@@ -24,7 +24,7 @@
 
             background = [ 
                 {
-                    path = "~/Wallpapers/ALLqk82.png";
+                    path = "~/Wallpapers/wallhaven-vq127l.jpg";
                     color = "$background";
                     # blur_passes = 2;
                     contrast = 1;

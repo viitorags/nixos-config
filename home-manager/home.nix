@@ -10,13 +10,16 @@
         homeDirectory = "/home/vitor";
         stateVersion = "24.11";
         packages = with pkgs; [
+            krita
             vscode
-            jetbrains.idea-community
             lua-language-server
             nixd
-            gruvbox-plus-icons
-            (callPackage ./modules/programs/gruvbox.nix{}).kvantum-gruvbox
-            spicetify-cli
+            nixpkgs-fmt
+            adw-gtk3
+            swww
+            imagemagick
+            pywalfox-native
+            bc
         ];
     	
         # Cursor do Mouse 

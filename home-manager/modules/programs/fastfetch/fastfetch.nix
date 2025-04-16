@@ -3,23 +3,23 @@
         enable = true;
 
         settings = {
-            logo = {
+            /*logo = {
                 source = "~/nix/home-manager/modules/programs/fastfetch/pngs/hypr.png";
                 type = "kitty";
     	        height = 19;
     	        padding = {
     		        top = 2;
     	        };
-            };
+            };*/
 
             display = {
                 separator = " ";
             };
 
             modules = [
-                "break"
-                "break"
-                "break"
+                #"break"
+                #"break"
+                #"break"
 	            {
                     type = "custom";
                     format = "  {#90}  {#31}  {#33}  {#33}  {#34}  {#35}  {#36}  {#37} ";

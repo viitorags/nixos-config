@@ -61,7 +61,7 @@ let
           sha256 = "18wsl2p9zdq2jdmvxl4r56lir530n73z9skgd7dssgq18lipnrx7";
         };
         themeIni = [
-            { section = "General"; key = "background"; value = ./sddm-backgrounds/ALLqk82.png;}
+            { section = "General"; key = "background"; value = ./sddm-backgrounds/wallhaven-vq127l.jpg;}
         ];
       };
       deps = with pkgs; [ 

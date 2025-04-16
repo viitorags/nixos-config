@@ -7,15 +7,17 @@
     obsidian
     firefox
     feh
-    libsForQt5.dolphin
     ark
-
+    rofi
+    mpv
+    
     # Coding stuff
     gcc
     nodejs_22
     neovim
     gh
-    jdk21_headless
+    clang-tools
+    gnumake
 
     # CLI utils
     tree
@@ -27,9 +29,10 @@
     brightnessctl
     lazygit
     btop
+    cava
+    nixos-shell
 
     # Notifications
-    dunst
     libnotify
 
     # WM and Wayland stuff
@@ -37,10 +40,8 @@
     xwayland
     wl-clipboard
     cliphist
-    swaynotificationcenter
     hyprland
     hyprcursor
-    kitty
     zsh
     eza
     xdg-user-dirs
@@ -66,9 +67,6 @@
     kdePackages.qt6ct
     kdePackages.qtstyleplugin-kvantum
     libsForQt5.qtstyleplugin-kvantum
-    libsForQt5.kio-extras
-    libsForQt5.ffmpegthumbs
-    libsForQt5.kdegraphics-thumbnailers
     papirus-nord
   ];
 

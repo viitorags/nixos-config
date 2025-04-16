@@ -19,8 +19,9 @@
             # recolor = "i";
             print = "p";
 
-            recolor = true;
-
+            recolor = false;
+            
+            /*
             notification-error-bg = "rgba(40,40,40,1)";     # bg
             notification-error-fg = "rgba(251,73,52,1)";    # bright:red
             notification-warning-bg = "rgba(40,40,40,1)";  # bg
@@ -60,7 +61,12 @@
             recolor-lightcolor = "rgba(40,40,40,1)";     # bg
             recolor-darkcolor = "rgba(235,219,178,1)";  # fg
             recolor-keephue = true;        
-
+            */
         };
+
+        extraConfig = ''
+            import "~/.cache/wal/zathuracolsrc" 
+        '';
+
     };
 }
