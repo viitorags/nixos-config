@@ -16,6 +16,7 @@
             lua-language-server
             nixd
             nixpkgs-fmt
+            gradience
             adw-gtk3
             swww
             imagemagick

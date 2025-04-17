@@ -40,14 +40,11 @@
   swww img $wall_dir/$wall_selection --transition-step 10 --transition-fps 30 --transition-type center &
   wal -i $wall_dir/$wall_selection -n
   sleep 0.4
+  gradience-cli apply -n pywal
   pkill waybar || waybar && waybar
   pkill swaync.service
   systemctl --user restart swaync.service
   pywalfox update
   cp $HOME/.cache/wal/cava_conf $HOME/.config/cava/config &
-  cp $HOME/.cache/wal/gtk.css $HOME/.config/gtk-3.0/gtk.css &
-  cp $HOME/.cache/wal/gtk-dark.css $HOME/.config/gtk-3.0/gtk-dark.css &
-  cp $HOME/.cache/wal/gtk.css $HOME/.config/gtk-4.0/gtk.css &
-  cp $HOME/.cache/wal/gtk-dark.css $HOME/.config/gtk-4.0/gtk-dark.css &
   [[ $(pidof cava) != "" ]] && pkill -USR1 cava &
   exit 0

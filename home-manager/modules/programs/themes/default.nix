@@ -1,7 +1,10 @@
 { pkgs, ... }: {
-  imports = [
-    ./pywal.nix
-  ];
+
+  home = {
+    packages = with pkgs; [
+      pywal16
+    ];
+  };
 
   qt = {
     enable = true;
@@ -24,13 +27,16 @@
 
   gtk = {
     enable = true;
+    
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
+
     theme = {
-      name = "Pywal-Gtk";
+      name = "adw-gtk3-dark";
     };
+
     gtk3 = {
       extraConfig = {
         gtk-application-prefer-dark-theme = true;
@@ -42,10 +48,7 @@
         gtk-application-prefer-dark-theme = true;
       };
     };
-  };
-
-  programs.pywal16 = {
-    enable = true;
+    
   };
 
   xdg.configFile."wal/templates/".source = ./templates;
