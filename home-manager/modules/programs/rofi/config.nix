@@ -39,6 +39,7 @@ window {
     border: 1;
     border-radius: 10;
     border-color: @bgStatusline3;
+    fullscreen: false;
 }
 
 mainbox {

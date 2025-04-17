@@ -240,7 +240,7 @@
         "rounding 10, floating:0, onworkspace:w[tv1]"
         "bordersize 2, floating:0, onworkspace:f[1]"
         "rounding 10, floating:0, onworkspace:f[1]"
-        "opacity 0.90 1.00,class:^(rofi)$"
+        "opacity 0.90 0.90,class:^(Rofi)$" 
         # Ignore maximize requests from apps. You'll probably like this.
         "suppressevent maximize, class:.*"
 

@@ -12,6 +12,7 @@
         packages = with pkgs; [
             krita
             vscode
+            prismlauncher
             lua-language-server
             nixd
             nixpkgs-fmt

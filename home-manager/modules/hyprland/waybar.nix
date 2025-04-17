@@ -226,7 +226,7 @@
           background:@background;
           color: @color7;
       }
-      #clock:hover, #custom-distro:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover{
+      #clock:hover, #custom-distro:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover,#pulseaudio:hover{
           transition: all .3s ease;
           color:@color9;
       }
@@ -244,7 +244,6 @@
           padding: 0px 5px;
           transition: all .3s ease;
           color:@color7;
-
       }
       #workspaces {
           padding: 0px 5px;

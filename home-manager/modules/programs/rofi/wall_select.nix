@@ -64,6 +64,7 @@
 
         element {
             enabled:                     true;
+            height:                      30%;
             orientation:                 vertical;
             spacing:                     0px;
             padding:                     0px;
