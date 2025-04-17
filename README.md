@@ -21,12 +21,14 @@ I used pywal16 to generate the colorscheme, and rofi to change the wallpaper.
   <tr>
     <td><img src="previews/1744901065_grim.png" width="600"/></td>
     <td><img src="previews/1744901069_grim.png" width="600"/></td>
+  </tr>
+  <tr>
     <td><img src="previews/1744901893_grim.png" width="600"/></td>
     <td><img src="previews/1744901957_grim.png" width="600"/></td>
     <td><img src="previews/1744901970_grim.png" width="600"/></td>
+    <td><img src="previews/1744901012_grim.png" width="600"/></td>
   </tr>
   <tr>
-    <td><img src="previews/1744901012_grim.png" width="600"/></td>
     <td><img src="previews/1744901027_grim.png" width="600"/></td>
     <td><img src="previews/1744901996_grim.png" width="600"/></td>
     <td><img src="previews/1744901033_grim.png" width="600"/></td>
