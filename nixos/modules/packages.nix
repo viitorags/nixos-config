@@ -3,8 +3,8 @@
     # Desktop apps
     telegram-desktop
     discord
-    spotify
     obsidian
+    spotify
     firefox
     feh
     ark

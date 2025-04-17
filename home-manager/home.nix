@@ -12,6 +12,7 @@
         packages = with pkgs; [
             krita
             vscode
+            dbeaver-bin
             prismlauncher
             lua-language-server
             nixd

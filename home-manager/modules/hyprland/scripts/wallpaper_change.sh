@@ -42,6 +42,7 @@
   sleep 0.4
   gradience-cli apply -n pywal
   pkill waybar || waybar && waybar
+  ~/nixos-config/home-manager/modules/hyprland/scripts/obsidiantheme.sh 
   pkill swaync.service
   systemctl --user restart swaync.service
   pywalfox update
