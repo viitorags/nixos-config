@@ -15,8 +15,6 @@
   dotsperinch=$(echo "scale=2; $monitor_res / $physical_monitor_size" | bc | xargs printf "%.0f")
   monitor_res=$(($monitor_res * $physical_monitor_size / $dotsperinch))
 
-  rofi_override="element-icon{size:"$monitor_res"px;border-radius:0px;}"
-
   rofi_command="rofi -wayland -dmenu -theme $HOME/.config/rofi/wall_select.rasi -theme-str $rofi_override"
 
   # Enable nullglob to ensure that the wildcard pattern expands to an empty list if no matches are found
@@ -27,25 +25,18 @@
     if [ -f "$imagen" ]; then
       nombre_archivo=$(basename "$imagen")
       if [ ! -f "$cacheDir/$nombre_archivo" ]; then
-        magick "$imagen" -strip -thumbnail 500x500^ -gravity center -extent 500x500 "$cacheDir/$nombre_archivo"
+        magick "$imagen" -strip -thumbnail 400x500^ -gravity center -extent 400x500 "$cacheDir/$nombre_archivo"
       fi
     fi
   done
 
   # Select a picture with rofi
-  wall_selection=$(find "$wall_dir" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) -exec basename {} \; | shuf | while read -r A; do echo -en "$A\x00icon\x1f""$cacheDir"/"$A\n"; done | $rofi_command)
+  wall_selection=$(find "$wall_dir" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" -o -iname "*.gif" \) -exec basename {} \; | shuf | while read -r A; do echo -en "$A\x00icon\x1f""$cacheDir"/"$A\n"; done | $rofi_command)
 
   # Set the wallpaper
   [[ -n "$wall_selection" ]] || exit 1
   swww img $wall_dir/$wall_selection --transition-step 10 --transition-fps 30 --transition-type center &
-  wal -i $wall_dir/$wall_selection -n
-  sleep 0.4
-  gradience-cli apply -n pywal
-  pkill waybar || waybar && waybar
-  ~/nixos-config/home-manager/modules/hyprland/scripts/obsidiantheme.sh 
-  pkill swaync.service
-  systemctl --user restart swaync.service
-  pywalfox update
-  cp $HOME/.cache/wal/cava_conf $HOME/.config/cava/config &
-  [[ $(pidof cava) != "" ]] && pkill -USR1 cava &
+	wallpaper_path=$($wall_dir/$wall_selection)
+	echo "export WALLPAPER_PATH=\"$wallpaper_path\"" > ~/.wallpaper_env
+	sleep 0.4
   exit 0

@@ -6,32 +6,36 @@
       enable = true;
     };
 
+    #systemd.variables = ["--all"];
+
     settings = {
       monitor = ",preferred,auto,auto";
 
       "$terminal" = "kitty";
       "$fileManager" = "kitty yazi";
-      "$menu" = "rofi -show drun";
-      "$browser" = "firefox";
+      "$menu" = "~/nixos-config/home-manager/modules/hyprland/scripts/launcher.sh";
+      "$browser" = "brave";
 
       exec-once = [
+        "dbus-update-activation-environment --systemd --all"
         "systemctl --user start hyprpolkitagent.service"
         "swww-daemon"
         "waybar &"
         "swaync"
         "wl-paste --type text --watch cliphist store"
         "wl-past --type image --watch cliphist store"
-        "hyprctl setcursor Bibata-Original-Ice 24"
-        # ''dconf write /org/gnome/desktop/interface/cursor-theme "'Bibata-Original-Ice'"''
+        "hyprctl setcursor Capitaine Cursors (Gruvbox) 24"
+        # ''dconf write /org/gnome/desktop/interface/cursor-theme "'Capitaine Cursors (Gruvbox)'"''
         ''donf write /org/gnome/desktop/interface/''
         ''dconf write /org/gnome/desktop/interface/font-name "'JetBrainsMono Regular"''
       ];
 
       env = [
+        "SSH_AUTH_SOCK,/run/user/1000/keyring/ssh"
         "XCURSOR_SIZE,24"
-        "XCURSOR_THEME,Bibata-Original-Ice"
+        "XCURSOR_THEME,Capitaine Cursors (Gruvbox)"
         "HYPRCURSOR_SIZE,24"
-        "HYPRCURSOR_THEME,Bibata-Original-Ice"
+        "HYPRCURSOR_THEME,Capitaine Cursors (Gruvbox)"
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
@@ -41,58 +45,14 @@
         "QT_AUTO_SCREEN_SCALE_FACTOR,1"
         "QT_QPA_PLATFORM,wayland;xcb"
         "QT_QPA_PLATFORMTHEME,qt5ct"
-        # "QT_STYLE_OVERRIDE,qt5ct"
         "XDG_MENU_PREFIX,arch-"
       ];
-
-      /*general = {
-        gaps_in = 3;
-        gaps_out = 5;
-
-        border_size = 2;
-
-        "col.active_border" = "$foreground";
-        "col.inactive_border" = "rgba(00000000)";
-
-        resize_on_border = false;
-
-        allow_tearing = false;
-
-        layout = "dwindle";
-      };
-
-      decoration = {
-        rounding = 5;
-        # roundingpower = 2;
-
-        active_opacity = 0.8;
-        inactive_opacity = 0.7;
-
-        fullscreen_opacity = 0.9;
-
-        shadow = {
-          enabled = true;
-          range = 4;
-          render_power = 3;
-          "color" = "$foreground";
-        };
-
-        blur = {
-          enabled = true;
-          size = 2;
-          passes = 2;
-          # blursls waybar
-          ignore_opacity = true;
-          vibrancy = 0.1696;
-        };
-      };*/
 
       misc = {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
         vfr = true;
       };
-
 
       animations = {
         enabled = true;
@@ -128,11 +88,10 @@
           "workspaces, 1, 7, menu_decel, slide"
           #"workspaces, 1, 2.5, softAcDecel, slide"
           "workspaces, 1, 7, menu_decel, slidefade 15%"
-          # "specialWorkspace, 1, 3, md3_decel, slidefadevert 15%"
-          "specialWorkspace, 1, 3, md3_decel, slidevert"
+          "specialWorkspace, 1, 3, md3_decel, slidefadevert 15%"
+          #"specialWorkspace, 1, 3, md3_decel, slidevert"
         ];
       };
-
 
       dwindle = {
         pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
@@ -166,21 +125,21 @@
         sensitivity = -0.5;
       };
 
-
       "$mainMod" = "SUPER"; # Sets "Windows" key as main modifier
       bind = [
         "$mainMod, RETURN, exec, $terminal"
-        "$mainMod SHIFT, Return, exec, [float; move 15% 7%; size 70% 40%] $terminal"
+        "$mainMod SHIFT, Return, exec, [float; move 15% 5.5%; size 70% 40%] $terminal"
         "$mainMod, Q, killactive,"
         "$mainMod SHIFT, M, exit,"
         "$mainMod, E, exec, $fileManager"
         "$mainMod, T, togglefloating"
         "$mainMod, R, fullscreen"
         "$mainMod, A, exec, $menu"
+        "$mainMod, L, exec, bash ~/nixos-config/home-manager/modules/hyprland/scripts/powermenu.sh"
         "$mainMod, P, pseudo, # dwindle"
         "$mainMod, J, togglesplit, # dwindle"
         "$mainMod, F, exec, $browser"
-        "$mainMod SHIFT, F, exec, firefox -private-window"
+        "$mainMod SHIFT, F, exec, brave --incognito"
         "$mainMod, C, exec, kitty -e zsh -ic nvim"
         "$mainMod, W, exec, bash ~/nixos-config/home-manager/modules/hyprland/scripts/wallpaper_change.sh"
         "$mainMod, B, exec, pkill waybar || waybar &"
@@ -240,14 +199,15 @@
         "rounding 10, floating:0, onworkspace:w[tv1]"
         "bordersize 2, floating:0, onworkspace:f[1]"
         "rounding 10, floating:0, onworkspace:f[1]"
-        "opacity 0.90 0.90,class:^(Rofi)$" 
+        "opacity 0.90 0.90, class:^(Rofi)$"
+        "noblur, class:^(Brave-browser)$"
         # Ignore maximize requests from apps. You'll probably like this.
         "suppressevent maximize, class:.*"
 
         # Fix some dragging issues with XWayland
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
       ];
-    
+
       layerrule = [
         "blur,rofi"
         "ignorezero,rofi"
@@ -261,51 +221,48 @@
         "ignorealpha 0.5, swaync-control-center"
         "ignorealpha 0.5, swaync-notification-window"
       ];
-
     };
 
     extraConfig = ''
-        source = ~/.cache/wal/colors-hyprland.conf
+      general {
+      	gaps_in = 3
+      	gaps_out = 5
 
-        general {
-          gaps_in = 3
-          gaps_out = 5
+      	border_size = 2
 
-          border_size = 0
+        col.active_border = rgba(d8a657ff)
+        col.inactive_border = rgba(414868aa)
 
-          col.active_border = $color5
-          col.inactive_border = $color7
+      	resize_on_border = false
 
-          resize_on_border = false
+      	allow_tearing = false
 
-          allow_tearing = false
+      	layout = dwindle
+         	}
 
-          layout = dwindle
-      }
+         decoration {
+      	rounding = 5
+      	# rounding_power = 2
 
-      decoration {
-          rounding = 10
-          # rounding_power = 2
+      	active_opacity = 0.9
+      	inactive_opacity = 0.9
 
-          active_opacity = 0.9
-          inactive_opacity = 0.9
+      	fullscreen_opacity = 1
 
-          fullscreen_opacity = 0.9
+      	shadow {
+      			enabled = false
+      			range = 4
+      			render_power = 3
+      			color = rgba(1a1a1aee)
+      	}
 
-          shadow {
-              enabled = false
-              range = 4
-              render_power = 3
-              color = $color7
-          }
-
-          blur {
-              enabled = true
-              size = 2
-              passes = 2
-              vibrancy = 0.1696
-          }
-      }
+      	blur {
+      			enabled = true
+      			size = 2
+      			passes = 2
+      			vibrancy = 0.1696
+      	}
+         }
     '';
   };
 }

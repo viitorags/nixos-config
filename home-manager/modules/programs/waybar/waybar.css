@@ -1,0 +1,89 @@
+* {
+	border: none;
+	font-family: "JetBrainsMono Regular";
+	font-size: 14px;
+	font-weight: bold;
+	background: none;
+}
+
+window#waybar {
+	color: #fbf1c7;
+}
+
+.modules-left,
+.modules-right,
+.modules-center {
+	border-radius: 6px;
+	background: #32302f;
+	padding: 12px 0;
+	border: solid 2px #d8a657;
+}
+
+#custom-sep {
+	color: #494d64;
+	margin: 4px 0;
+}
+
+#workspaces {
+	border-radius: 4px;
+	margin-right: 5px;
+}
+
+#workspaces button {
+	color: #d79920;
+	background: none;
+	padding: 0;
+	transition: all .2s ease;
+}
+
+#workspaces button:hover {
+	color: #d3869b;
+}
+
+#workspaces button.active {
+	color: #d79920;
+}
+
+
+#workspaces button.empty {
+	color: #665c54;
+}
+
+#workspaces button:hover {
+	color: #d3869b;
+}
+
+#workspaces button.visible {
+	color: #d79920;
+}
+
+#workspaces button.urgent {
+	color: #ea6962;
+}
+
+#temperature {
+	color: #d8a657;
+}
+
+#clock {
+	font-weight: 600;
+	color: #a9b665;
+}
+
+#pulseaudio {
+	color: #7daea3;
+}
+
+#pulseaudio.muted {
+	color: #ed8796;
+}
+
+#network {
+	color: #e78a4e;
+}
+
+#custom-notification {
+	padding-top: 5px;
+	padding-right: 2px;
+	padding-left: 2px;
+}

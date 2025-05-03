@@ -1,13 +1,13 @@
 {
-    programs.feh = {
-        enable = true;
+  programs.feh = {
+    enable = true;
 
-        themes = {
-            feh = [
-                "-Z"
-                "-F"
-            ];
-        };
-        
+    themes = {
+      feh = [
+        "-Z"
+        "-F"
+      ];
     };
+
+  };
 }

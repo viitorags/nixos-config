@@ -1,16 +1,16 @@
-{ config, pkgs, ...}: {
-    programs.btop = {
-        enable = true;
+{ config, pkgs, ... }: {
+  programs.btop = {
+    enable = true;
 
-        settings = {
-            color_theme = "TTY";
-            
-            truecolor = true;
+    settings = {
+      color_theme = "TTY";
 
-            net_iface = "";
+      truecolor = true;
 
-            shown_boxes = "cpu mem proc";
+      net_iface = "";
 
-        };
+      shown_boxes = "cpu mem proc";
+
     };
+  };
 }

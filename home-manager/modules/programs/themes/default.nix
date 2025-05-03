@@ -1,11 +1,5 @@
-{ pkgs, ... }: {
-
-  home = {
-    packages = with pkgs; [
-      pywal16
-    ];
-  };
-
+{ pkgs, ... }:
+{
   qt = {
     enable = true;
     platformTheme.name = "qt5ct";
@@ -15,42 +9,27 @@
   xdg.configFile = {
     "Kvantum/kvantum.kvconfig".text = ''
       [General]
-      theme=pywal
+      theme=gruvbox-kvantum
     '';
   };
 
   dconf.settings = {
-      "org/gnome/desktop/interface" = {
-        color-scheme = "prefer-dark";
-      };
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
   };
 
   gtk = {
     enable = true;
-    
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
-
     theme = {
-      name = "adw-gtk3-dark";
+      name = "Gruvbox-Dark";
+      package = pkgs.gruvbox-gtk-theme;
     };
-
-    gtk3 = {
-      extraConfig = {
-        gtk-application-prefer-dark-theme = true;
-      };
-    };
-
-    gtk4 = {
-      extraConfig = {
-        gtk-application-prefer-dark-theme = true;
-      };
-    };
-    
   };
 
-  xdg.configFile."wal/templates/".source = ./templates;
-
-} 
+  xdg.configFile."Kvantum/gruvbox-kvantum".source = ./gruvbox-kvantum;
+}
