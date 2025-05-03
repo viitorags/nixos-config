@@ -20,13 +20,15 @@ My NixOs Tokyo Night setup using <a href="">Hyprland</a> and with gruvbox-materi
 
 <table>
   <tr>
-    <td><img src="previews/1746229922_grim.png" width="600"/></td>
-    <td><img src="previews/1746229628_grim.png" width="600"/></td>
-    <td><img src="previews/1746229633_grim.png" width="600"/></td>
+    <td><img src="previews/1746229922_grim.png" width="800"/></td>
+    <td><img src="previews/1746229467_grim.png" width="800"/></td>
   </tr>
   <tr>
-    <td><img src="previews/1746229483_grim.png" width="600"/></td>
-    <td><img src="previews/1746229617_grim.png" width="600"/></td>
-    <td><img src="previews/1746229467_grim.png" width="600"/></td>
+    <td><img src="previews/1746229628_grim.png" width="800"/></td>
+    <td><img src="previews/1746229633_grim.png" width="800"/></td>
+  </tr>
+  <tr>
+    <td><img src="previews/1746229483_grim.png" width="800"/></td>
+    <td><img src="previews/1746229617_grim.png" width="800"/></td>
   </tr>
 </table>
