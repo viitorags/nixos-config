@@ -10,7 +10,7 @@
     ./openTablet.nix
     ./virt-manager.nix
     ./udisk.nix
-    ./sddm/default.nix
+    ./sddm.nix
     ./polkit.nix
   ];
 }

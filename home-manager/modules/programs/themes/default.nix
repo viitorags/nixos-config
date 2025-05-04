@@ -29,6 +29,9 @@
       name = "Gruvbox-Dark";
       package = pkgs.gruvbox-gtk-theme;
     };
+    font = {
+      name = "Departure Mono";
+    };
   };
 
   xdg.configFile."Kvantum/gruvbox-kvantum".source = ./gruvbox-kvantum;

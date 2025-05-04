@@ -16,7 +16,7 @@ wallpaper_path=$(swww query | sed -n 's/.*currently displaying: image: \(.*\)/\1
 
 # CMDs
 lastlogin="`last $USER | head -n1 | tr -s ' ' | cut -d' ' -f5,6,7`"
-uptime="`uptime -p | sed -e 's/up //g'`"
+uptime="`uptime | awk -F'up ' '{split($2,a,","); print a[1]}'`"
 host=`hostname`
 
 # Options
@@ -35,7 +35,7 @@ rofi_cmd() {
 		-p "$USER@$host" \
 		-mesg " Uptime: $uptime" \
 		-theme ${dir}/${theme}.rasi  \
-  	-theme-str "imagebox { background-image: url(\"$wallpaper_path\", height); }"
+  	-theme-str "inputbar { background-image: url(\"$wallpaper_path\", width); }"
 }
 
 confirm_cmd() {
@@ -85,6 +85,8 @@ run_cmd() {
 				i3-msg exit
 			elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
 				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
+			elif [[ "$XDG_CURRENT_DESKTOP" == 'Hyprland' ]]; then
+				hyprctl dispatch exit
 			fi
 		fi
 	else

@@ -36,7 +36,12 @@
   # Set the wallpaper
   [[ -n "$wall_selection" ]] || exit 1
   swww img $wall_dir/$wall_selection --transition-step 10 --transition-fps 30 --transition-type center &
-	wallpaper_path=$($wall_dir/$wall_selection)
-	echo "export WALLPAPER_PATH=\"$wallpaper_path\"" > ~/.wallpaper_env
+	wallpaper_path="$wall_dir/$wall_selection"
+	mkdir -p ~/.cache/sddm-img
+	ln -sf "$wallpaper_path" ~/.cache/img-symbol/current.wallpaper
+	rm -rf /sddmt/sugar-candy/Backgrounds/
+	mkdir /sddmt/sugar-candy/Backgrounds/
+	cp "$wallpaper_path" /sddmt/sugar-candy/Backgrounds/
+	sed -i "s|^Background=.*$|Background=Backgrounds/${wall_selection}|" /sddmt/sugar-candy/theme.conf
 	sleep 0.4
   exit 0

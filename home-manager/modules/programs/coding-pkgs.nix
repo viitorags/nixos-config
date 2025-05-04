@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   home.packages = with pkgs; [
     # Coding Utils
     vscode
@@ -16,6 +17,9 @@
     nixfmt-rfc-style
     nodePackages.live-server
     lazygit
+    (texlive.combine {
+      inherit (texlive) scheme-medium latexmk;
+    })
 
     # LSP
     nodePackages.vscode-langservers-extracted

@@ -15,10 +15,9 @@
       krita
       prismlauncher
       swww
-      rich-cli
       zathura
-      dwt1-shell-color-scripts
       bc
+      (callPackage ./modules/programs/pokemon-col-sh.nix { }).pokemon-colorscripts
     ];
 
     # Cursor do Mouse
@@ -32,10 +31,6 @@
 
     sessionVariables = {
       QT_QUICK_CONTROLS_STYLE = "Kvantum";
-      preSwitch = ''
-        # Remover o arquivo alterado manualmente antes de rodar o switch
-        rm -rf ~/.config/rofi
-      '';
     };
   };
 }

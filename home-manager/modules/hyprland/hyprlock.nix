@@ -16,7 +16,7 @@
         text = ''cmd[update:1000] echo "$(date +"%-I:%M")"'';
         color = "rgba(242, 243, 244, 0.75)";
         font_size = 95;
-        font_family = "JetBrains Mono Extrabold";
+        font_family = "Departure Mono";
         position = "0, 200";
         halign = "center";
         valign = "center";
@@ -24,7 +24,7 @@
 
       background = [
         {
-          path = "~/Wallpapers/wallhaven-1py859.jpg";
+          path = "~/.cache/img-symbol/current.wallpaper";
           color = "$background";
           # blur_passes = 2;
           contrast = 1;

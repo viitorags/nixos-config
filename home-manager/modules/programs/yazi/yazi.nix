@@ -1,4 +1,12 @@
-{ pkgs, unstable, ... }: {
+{ pkgs, unstable, ... }:
+{
+  home = {
+    packages = with pkgs; [
+      ouch
+      glow
+    ];
+  };
+
   programs.yazi = {
     enable = true;
     package = unstable.yazi;
@@ -13,7 +21,14 @@
           run = "plugin mount";
         }
         {
-          on = [ "C" "d" ];
+          on = "L";
+          run = "lazygit";
+        }
+        {
+          on = [
+            "P"
+            "p"
+          ];
           run = "plugin diff";
           desc = "Diff the selected with the hovered file";
         }
@@ -59,48 +74,184 @@
       };
 
       opener = {
-        pdf = [{ run = ''zathura "$@" ''; orphan = true; for = "unix"; }];
-        img = [{ run = ''feh "$@" ''; orphan = true; for = "unix"; }];
-        mpv = [{ run = ''mpv "$@" ''; orphan = true; for = "unix"; }];
-        ark = [{ run = ''ark "$@" ''; orphan = true; for = "unix"; }];
-        extract = [{ run = ''ouch d -y "$@" ''; desc = "Extract here with ouch"; for = "unix"; }];
+        pdf = [
+          {
+            run = ''zathura "$@" '';
+            orphan = true;
+            for = "unix";
+          }
+        ];
+        img = [
+          {
+            run = ''feh "$@" '';
+            orphan = true;
+            for = "unix";
+          }
+        ];
+        mpv = [
+          {
+            run = ''mpv "$@" '';
+            orphan = true;
+            for = "unix";
+          }
+        ];
+        ark = [
+          {
+            run = ''ark "$@" '';
+            orphan = true;
+            for = "unix";
+          }
+        ];
+        extract = [
+          {
+            run = ''ouch d -y "$@" '';
+            desc = "Extract here with ouch";
+            for = "unix";
+          }
+        ];
+
+        EDITOR = [
+          {
+            run = ''nvim "$@"'';
+            desc = "Run EDITOR";
+          }
+        ];
       };
 
       open = {
         prepend_rules = [
-          { name = "*.pdf"; use = "pdf"; }
-          { name = "*.jpg"; use = "img"; }
-          { name = "*.png"; use = "img"; }
-          { name = "*.gif"; use = "img"; }
-          { name = "*.bmp"; use = "img"; }
-          { name = "*.svg"; use = "img"; }
-          { name = "*.ico"; use = "img"; }
-          { name = "*.heic"; use = "img"; }
-          { name = "*.jpeg"; use = "img"; }
-          { name = "*.tiff"; use = "img"; }
-          { name = "*.webp"; use = "img"; }
-          { name = "*.mp4"; use = "mpv"; }
-          { name = "*.zip"; use = "ark"; }
-          { name = "*.tar"; use = "ark"; }
-          { name = "*.gz"; use = "ark"; }
-          { name = "*.bz2"; use = "ark"; }
-          { name = "*.xz"; use = "ark"; }
-          { name = "*.7z"; use = "ark"; }
-          { name = "*.rar"; use = "ark"; }
-          { name = "*.tar.gz"; use = "ark"; }
-          { name = "*.tgz"; use = "ark"; }
-          { name = "*.tar.bz2"; use = "ark"; }
-          { name = "*.tbz2"; use = "ark"; }
-          { name = "*.tar.xz"; use = "ark"; }
-          { name = "*.txz"; use = "ark"; }
-          { name = "*.lz"; use = "ark"; }
-          { name = "*.lzma"; use = "ark"; }
-          { name = "*.zst"; use = "ark"; }
-          { name = "*.zstd"; use = "ark"; }
-          { name = "*.cab"; use = "ark"; }
-          { name = "*.iso"; use = "ark"; }
-          { name = "*.apk"; use = "ark"; }
-          { name = "*.jar"; use = "ark"; }
+          {
+            name = "*.pdf";
+            use = "pdf";
+          }
+          {
+            name = "*.jpg";
+            use = "img";
+          }
+          {
+            name = "*.png";
+            use = "img";
+          }
+          {
+            name = "*.gif";
+            use = "img";
+          }
+          {
+            name = "*.bmp";
+            use = "img";
+          }
+          {
+            name = "*.svg";
+            use = "img";
+          }
+          {
+            name = "*.ico";
+            use = "img";
+          }
+          {
+            name = "*.heic";
+            use = "img";
+          }
+          {
+            name = "*.jpeg";
+            use = "img";
+          }
+          {
+            name = "*.tiff";
+            use = "img";
+          }
+          {
+            name = "*.webp";
+            use = "img";
+          }
+          {
+            name = "*.mp4";
+            use = "mpv";
+          }
+          {
+            name = "*.zip";
+            use = "ark";
+          }
+          {
+            name = "*.tar";
+            use = "ark";
+          }
+          {
+            name = "*.gz";
+            use = "ark";
+          }
+          {
+            name = "*.bz2";
+            use = "ark";
+          }
+          {
+            name = "*.xz";
+            use = "ark";
+          }
+          {
+            name = "*.7z";
+            use = "ark";
+          }
+          {
+            name = "*.rar";
+            use = "ark";
+          }
+          {
+            name = "*.tar.gz";
+            use = "ark";
+          }
+          {
+            name = "*.tgz";
+            use = "ark";
+          }
+          {
+            name = "*.tar.bz2";
+            use = "ark";
+          }
+          {
+            name = "*.tbz2";
+            use = "ark";
+          }
+          {
+            name = "*.tar.xz";
+            use = "ark";
+          }
+          {
+            name = "*.txz";
+            use = "ark";
+          }
+          {
+            name = "*.lz";
+            use = "ark";
+          }
+          {
+            name = "*.lzma";
+            use = "ark";
+          }
+          {
+            name = "*.zst";
+            use = "ark";
+          }
+          {
+            name = "*.zstd";
+            use = "ark";
+          }
+          {
+            name = "*.cab";
+            use = "ark";
+          }
+          {
+            name = "*.iso";
+            use = "ark";
+          }
+          {
+            name = "*.apk";
+            use = "ark";
+          }
+          {
+            name = "*.jar";
+            use = "ark";
+          }
         ];
       };
 
@@ -120,20 +271,39 @@
 
         prepend_previewers = [
           # Archive previewer
-          { mime = "application/*zip"; run = "ouch"; }
-          { mime = "application/x-tar"; run = "ouch"; }
-          { mime = "application/x-bzip2"; run = "ouch"; }
-          { mime = "application/x-7z-compressed"; run = "ouch"; }
-          { mime = "application/x-rar"; run = "ouch"; }
-          { mime = "application/x-xz"; run = "ouch"; }
-          { mime = "application/xz"; run = "ouch"; }
-
-          # Rich Previewer
-          { name = "*.csv"; run = "rich-preview"; } # for csv files
-          { name = "*.md"; run = "rich-preview"; } # for markdown (.md) files
-          { name = "*.rst"; run = "rich-preview"; } # for restructured text (.rst) files
-          { name = "*.ipynb"; run = "rich-preview"; } # for jupyter notebooks (.ipynb)
-          { name = "*.json"; run = "rich-preview"; } # for json (.json) files
+          {
+            mime = "application/*zip";
+            run = "ouch";
+          }
+          {
+            mime = "application/x-tar";
+            run = "ouch";
+          }
+          {
+            mime = "application/x-bzip2";
+            run = "ouch";
+          }
+          {
+            mime = "application/x-7z-compressed";
+            run = "ouch";
+          }
+          {
+            mime = "application/x-rar";
+            run = "ouch";
+          }
+          {
+            mime = "application/x-xz";
+            run = "ouch";
+          }
+          {
+            mime = "application/xz";
+            run = "ouch";
+          }
+          # Glow preview
+          {
+            name = "*.md";
+            run = "glow";
+          }
         ];
       };
     };

@@ -23,11 +23,11 @@
         "waybar &"
         "swaync"
         "wl-paste --type text --watch cliphist store"
-        "wl-past --type image --watch cliphist store"
+        "wl-paste --type image --watch cliphist store"
         "hyprctl setcursor Capitaine Cursors (Gruvbox) 24"
         # ''dconf write /org/gnome/desktop/interface/cursor-theme "'Capitaine Cursors (Gruvbox)'"''
         ''donf write /org/gnome/desktop/interface/''
-        ''dconf write /org/gnome/desktop/interface/font-name "'JetBrainsMono Regular"''
+        ''dconf write /org/gnome/desktop/interface/font-name "'Departure Mono"''
       ];
 
       env = [
@@ -144,7 +144,7 @@
         "$mainMod, W, exec, bash ~/nixos-config/home-manager/modules/hyprland/scripts/wallpaper_change.sh"
         "$mainMod, B, exec, pkill waybar || waybar &"
         "$mainMod, L, exec, wlogout"
-        "$mainMod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+        "$mainMod, V, exec, ~/nixos-config/home-manager/modules/hyprland/scripts/clipboard.sh"
         # Capturas de tela
         ", insert, exec, grim $(xdg-user-dir)/Imagens/Screenshots/$(date +'%s_grim.png')"
         ''CTRL SHIFT, insert, exec, grim -g "$(slurp)" $(xdg-user-dir)/Imagens/Screenshots/$(date +'%s_grim.png')''

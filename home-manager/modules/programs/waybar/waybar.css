@@ -1,7 +1,7 @@
 * {
 	border: none;
-	font-family: "JetBrainsMono Regular";
-	font-size: 14px;
+	font-family: "Departure Mono";
+	font-size: 16px;
 	font-weight: bold;
 	background: none;
 }
@@ -84,6 +84,6 @@ window#waybar {
 
 #custom-notification {
 	padding-top: 5px;
-	padding-right: 2px;
-	padding-left: 2px;
+	padding-right: 3px;
+	padding-left: 3px;
 }

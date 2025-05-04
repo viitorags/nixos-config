@@ -1,4 +1,3 @@
-{ config, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -24,10 +23,6 @@
 
     initExtra = ''
       export PATH="$HOME/.cache/npm/global/bin:$PATH"
-
-      if [ -f "$HOME/.wallpaper_env" ]; then
-        source "$HOME/.wallpaper_env"
-      fi
     '';
 
     oh-my-zsh = {

@@ -3,12 +3,14 @@
   home = {
     packages = with pkgs; [
       rofi
+      haskellPackages.greenclip
     ];
   };
 
   imports = [
-    ./config/config.nix
-    ./config/wall_select.nix
-    ./config/powermenu.nix
+    ./themes/config.nix
+    ./themes/wall_select.nix
+    ./themes/powermenu.nix
+    ./themes/clipboard.nix
   ];
 }

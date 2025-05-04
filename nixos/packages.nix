@@ -64,12 +64,15 @@
     kdePackages.qt6ct
     kdePackages.qtstyleplugin-kvantum
     libsForQt5.qtstyleplugin-kvantum
+    libsForQt5.qtgraphicaleffects
     papirus-nord
   ];
 
+  # Fonts
   fonts.packages = with pkgs; [
     jetbrains-mono
     font-awesome
+    departure-mono
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 }

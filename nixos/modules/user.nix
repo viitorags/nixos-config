@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.zsh.enable = true;
 
   users = {
@@ -7,9 +8,13 @@
     users.vitor = {
       isNormalUser = true;
       description = "Vitor";
-      extraGroups = ["networkmanager" "wheel" "docker"];
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+        "docker"
+        "libvirtd"
+      ];
       ignoreShellProgramCheck = true;
-      packages = with pkgs; [];
     };
   };
 }

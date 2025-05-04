@@ -4,11 +4,11 @@
 
     settings = {
       logo = {
-        source = "~/nix/home-manager/modules/programs/fastfetch/pngs/hypr.png";
+        source = "~/nixos-config/home-manager/modules/programs/fastfetch/pngs/hypr.png";
         type = "kitty";
-        height = 19;
+        height = 17;
         padding = {
-          top = 2;
+          top = 1;
         };
       };
 

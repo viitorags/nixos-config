@@ -3,11 +3,11 @@
     enable = true;
 
     settings = {
-      font_family = "JetBrains Mono SemiBold";
-      bold_font = "JetBrains Mono Bold";
-      italic_font = "JetBrains Mono Italic";
-      bold_italic_font = "JetBrains Mono Bold Italic";
-      font_size = 10;
+      font_family = "Departure Mono";
+      bold_font = "auto";
+      italic_font = "auto";
+      bold_italic_font = "auto";
+      font_size = 11;
       confirm_os_window_close = 0;
       allow_remote_control = "yes";
       cursor_trail = 1;
