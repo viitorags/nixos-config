@@ -88,6 +88,13 @@
             for = "unix";
           }
         ];
+        edit = [
+          {
+            run = ''nvim "$@" '';
+            block = true;
+            for = "unix";
+          }
+        ];
         mpv = [
           {
             run = ''mpv "$@" '';

@@ -14,6 +14,7 @@
     alejandra
     clang-tools
     nodejs_22
+    python313
     nixfmt-rfc-style
     nodePackages.live-server
     lazygit

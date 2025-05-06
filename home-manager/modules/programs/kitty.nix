@@ -13,7 +13,7 @@
       cursor_trail = 1;
       cursor_trail_decay = "0.1 0.4";
       frame_delay = 0;
-      foreground_opacity = 0.95;
+      foreground_opacity = 1;
       background_opacity = 0.9;
       enable_audio_bell = "no";
       detect_urls = "yes";
