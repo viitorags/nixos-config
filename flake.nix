@@ -2,10 +2,10 @@
   description = "My System Configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -14,6 +14,7 @@
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
     };
+
   };
 
   outputs =
@@ -23,7 +24,7 @@
       nixpkgs-unstable,
       spicetify-nix,
       ...
-    }:
+    }@inputs:
     let
       system = "x86_64-linux";
 
@@ -31,6 +32,7 @@
         inherit system;
         config.allowUnfree = true;
       };
+
     in
     {
       nixosConfigurations.gh0stk = nixpkgs.lib.nixosSystem {
@@ -38,15 +40,22 @@
         modules = [
           ./nixos/configuration.nix
         ];
+        specialArgs = {
+          inherit unstable;
+        };
       };
 
       homeConfigurations.vitor = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
+        pkgs = import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
         modules = [
-          ./home-manager/home.nix
+          ./home/home.nix
           spicetify-nix.homeManagerModules.default
         ];
         extraSpecialArgs = {
+          inherit inputs;
           inherit unstable;
           inherit spicetify-nix;
         };

@@ -1,0 +1,19 @@
+{
+  imports = [
+    ./hyprland/default.nix
+    ./programs/fastfetch
+    ./programs/kitty
+    ./programs/swaync
+    ./programs/yazi
+    ./programs/btop
+    ./programs/zsh
+    ./programs/feh
+    ./programs/cava
+    ./programs/zathura
+    ./programs/rofi
+    ./programs/spicetify
+    ./programs/coding-pkgs.nix
+    ./programs/themes
+    ./programs/waybar
+  ];
+}

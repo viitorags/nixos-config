@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   services.xserver = {
     enable = true;
@@ -6,7 +7,11 @@
       layout = "br";
       variant = "";
     };
-    videoDrivers = ["modesetting"];
+
+    excludePackages = [ pkgs.xterm ];
+
+    videoDrivers = [ "modesetting" ];
+
     deviceSection = ''
       Option "AccelMethod" "none"
     '';

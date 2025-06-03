@@ -1,6 +1,6 @@
 # My Nixos Config
 
-My NixOs Tokyo Night setup using <a href="">Hyprland</a> and with gruvbox-material theme.
+My NixOs Gruvbox setup using <a href="">Hyprland</a> and with gruvbox-material theme.
 
 ## Dependencies
 

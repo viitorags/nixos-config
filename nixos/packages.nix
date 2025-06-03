@@ -6,15 +6,11 @@
     discord
     obsidian
     firefox
-    ark
+    libsForQt5.ark
     brave
     gparted
     mpv
-
-    # Coding stuff
-    gcc
-    gh
-    gnumake
+    (callPackage ./modules/huiontablet/default.nix { })
 
     # CLI utils
     tree
@@ -26,6 +22,8 @@
     brightnessctl
     nixos-shell
     docker-compose
+    gh
+    qemu
 
     # Notifications
     libnotify
@@ -33,9 +31,10 @@
     # WM and Wayland stuff
     wayland
     xwayland
+    aquamarine
     wl-clipboard
+    wf-recorder
     cliphist
-    hyprland
     hyprcursor
     zsh
     eza
@@ -72,7 +71,6 @@
   fonts.packages = with pkgs; [
     jetbrains-mono
     font-awesome
-    departure-mono
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    nerd-fonts.jetbrains-mono
   ];
 }
