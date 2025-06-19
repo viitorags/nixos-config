@@ -22,7 +22,7 @@
     brightnessctl
     nixos-shell
     docker-compose
-    gh
+    # gh
     qemu
 
     # Notifications

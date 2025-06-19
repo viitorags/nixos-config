@@ -7,7 +7,7 @@
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
-      font_size = 10;
+      font_size = 11;
       confirm_os_window_close = 0;
       allow_remote_control = "yes";
       cursor_trail = 1;
@@ -73,10 +73,10 @@
 
     keybindings = {
       "ctrl+c" = "copy_or_interrupt";
-      "ctrl+j" = "kitten pass_keys.py bottom ctrl+j";
-      "ctrl+k" = "kitten pass_keys.py top    ctrl+k";
-      "ctrl+h" = "kitten pass_keys.py left   ctrl+h";
-      "ctrl+l" = "kitten pass_keys.py right  ctrl+l";
+      "alt+h" = "neighboring_window left";
+      "alt+j" = "neighboring_window down";
+      "alt+k" = "neighboring_window up";
+      "alt+l" = "neighboring_window right";
       "ctrl+shift+left" = "resize_window narrower";
       "ctrl+shift+right" = "resize_window wider";
       "ctrl+shift+up" = "resize_window taller";

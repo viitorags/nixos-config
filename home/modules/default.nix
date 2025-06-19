@@ -15,5 +15,6 @@
     ./programs/coding-pkgs.nix
     ./programs/themes
     ./programs/waybar
+    ./programs/lazygit
   ];
 }

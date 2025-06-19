@@ -10,7 +10,8 @@
     gh-notify
     nixfmt-rfc-style
     lazygit
-    lazydocker
+    gh
+    delta
     stylua
     openjdk23
     python313

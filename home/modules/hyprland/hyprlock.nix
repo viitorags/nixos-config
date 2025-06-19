@@ -16,7 +16,7 @@
         text = ''cmd[update:1000] echo "$(date +"%-I:%M")"'';
         color = "rgba(242, 243, 244, 0.75)";
         font_size = 95;
-        font_family = "Departure Mono";
+        font_family = "JetBrainsMono";
         position = "0, 200";
         halign = "center";
         valign = "center";
@@ -26,11 +26,11 @@
         {
           path = "~/.cache/img-symbol/current.wallpaper";
           color = "$background";
-          # blur_passes = 2;
-          contrast = 1;
-          brightness = 0.5;
-          vibrancy = 0.2;
-          vibrancy_darkness = 0.2;
+          blur_passes = 2;
+          contrast = 0.8916;
+          brightness = 0.8172;
+          vibrancy = 0.1696;
+          vibrancy_darkness = 0.0;
         }
       ];
 

@@ -6,92 +6,63 @@
       logo = {
         source = "$(find \"$HOME/nixos-config/home/modules/programs/fastfetch/pngs/\" -name \"*.png\" | sort -R | head -1)";
         type = "kitty";
-        height = 17;
+        height = 12;
         padding = {
-          top = 1;
+          top = 2;
+          right = 4;
         };
       };
-
       "display" = {
         "separator" = " ";
       };
       "modules" = [
         "break"
         "break"
-        {
-          "type" = "custom";
-          "format" = "{#90}  {#31}  {#33}  {#33}  {#34}  {#35}  {#36}  {#37} ";
-        }
+        "break"
         {
           "type" = "title";
           "keyWidth" = 10;
         }
+        "break"
         {
-          type = "os";
-          key = "  OS";
-          keyColor = "34";
+          "type" = "os";
+          "key" = " ";
+          "keyColor" = "33";
         }
         {
           "type" = "kernel";
-          "key" = " ";
-          "keyColor" = "34";
+          "key" = " ";
+          "keyColor" = "33";
         }
         {
           "type" = "packages";
-          "format" = "{} (pacman)";
           "key" = " ";
-          "keyColor" = "34";
+          "keyColor" = "33";
         }
         {
           "type" = "shell";
           "key" = " ";
-          "keyColor" = "34";
+          "keyColor" = "33";
         }
         {
           "type" = "terminal";
           "key" = " ";
-          "keyColor" = "34";
+          "keyColor" = "33";
         }
         {
           "type" = "wm";
           "key" = " ";
-          "keyColor" = "34";
-        }
-        {
-          "type" = "cursor";
-          "key" = " ";
-          "keyColor" = "34";
-        }
-        {
-          "type" = "terminalfont";
-          "key" = " ";
-          "keyColor" = "34";
+          "keyColor" = "33";
         }
         {
           "type" = "uptime";
           "key" = " ";
-          "keyColor" = "34";
-        }
-        {
-          "type" = "datetime";
-          "format" = "{1}-{3}-{11}";
-          "key" = " ";
-          "keyColor" = "34";
+          "keyColor" = "33";
         }
         {
           "type" = "media";
           "key" = "󰝚 ";
-          "keyColor" = "34";
-        }
-        {
-          "type" = "player";
-          "key" = " ";
-          "keyColor" = "34";
-        }
-        "break"
-        {
-          "type" = "custom";
-          "format" = "{#90}  {#31}  {#33}  {#33}  {#34}  {#35}  {#36}  {#37} ";
+          "keyColor" = "33";
         }
         "break"
         "break"
