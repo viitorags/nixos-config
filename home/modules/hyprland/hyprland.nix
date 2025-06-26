@@ -26,16 +26,16 @@
         "swaync"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
-        "hyprctl setcursor Capitaine Cursors (Gruvbox) 24"
+        "hyprctl setcursor catppuccin-mocha-mauve-cursors 24"
         # ''dconf write /org/gnome/desktop/interface/cursor-theme "'Capitaine Cursors (Gruvbox)'"''
       ];
 
       env = [
         "SSH_AUTH_SOCK,/run/user/1000/keyring/ssh"
         "XCURSOR_SIZE,24"
-        "XCURSOR_THEME,Capitaine Cursors (Gruvbox)"
+        "XCURSOR_THEME,catppuccin-mocha-mauve-cursors"
         "HYPRCURSOR_SIZE,24"
-        "HYPRCURSOR_THEME,Capitaine Cursors (Gruvbox)"
+        "HYPRCURSOR_THEME,catppuccin-mocha-mauve-cursors"
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
@@ -112,7 +112,7 @@
       "$mainMod" = "SUPER"; # Sets "Windows" key as main modifier
       bind = [
         "$mainMod, RETURN, exec, $terminal"
-        "$mainMod SHIFT, Return, exec, [float; move 15% 5.5%; size 70% 40%] $terminal"
+        "$mainMod SHIFT, Return, exec, [float; move 15% 5%; size 70% 40%] $terminal"
         "$mainMod, Q, killactive,"
         "$mainMod SHIFT, M, exit,"
         "$mainMod, E, exec, $fileManager"
@@ -126,6 +126,7 @@
         "$mainMod, F, exec, $browser"
         "$mainMod SHIFT, F, exec, brave --incognito"
         "$mainMod, C, exec, $editor"
+        "bind=$mainMod SHIFT, C, exec, [float; move 15% 5%; size 70% 90%] $editor"
         "$mainMod, W, exec, bash -c ~/nixos-config/home/modules/hyprland/scripts/wallpaper_change.sh"
         "$mainMod, B, exec, pkill waybar || waybar"
         "$mainMod, L, exec, wlogout"
@@ -197,10 +198,10 @@
         "blur,rofi"
         "ignorezero,rofi"
         "blur, waybar"
-        "ignorezero, waybar"
-        "ignorealpha 0.5, waybar"
         "blur, swaync-control-center"
         "blur, swaync-notification-window"
+        "blur, waybar"
+        "ignorezero, waybar"
         "ignorezero, swaync-control-center"
         "ignorezero, swaync-notification-window"
         "ignorealpha 0.5, swaync-control-center"
@@ -215,7 +216,7 @@
 
           border_size = 2
 
-          col.active_border = rgba(d8a657ff)
+          col.active_border = rgba(cba6f7ff)
           col.inactive_border = rgba(414868aa)
 
           resize_on_border = false
@@ -229,8 +230,8 @@
           rounding = 5
           # rounding_power = 2
 
-          active_opacity = 0.9
-          inactive_opacity = 0.9
+          active_opacity = 0.8
+          inactive_opacity = 0.7
 
           fullscreen_opacity = 1
 
@@ -244,8 +245,8 @@
           blur {
                   enabled = true
                   size = 2
-                  passes = 4
-                  vibrancy = 0.1696
+                  passes = 5
+                  vibrancy = 2
           }
          }
     '';
