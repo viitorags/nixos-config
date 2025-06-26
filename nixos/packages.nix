@@ -22,7 +22,6 @@
     brightnessctl
     nixos-shell
     docker-compose
-    # gh
     qemu
 
     # Notifications
@@ -65,6 +64,8 @@
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qtgraphicaleffects
     papirus-nord
+    cowsay
+    cmatrix
   ];
 
   # Fonts
