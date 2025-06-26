@@ -10,24 +10,24 @@ configuration {
 
 //----- Global Properties -----//
 * {
-  font:                      "Departure Mono 15";
-  main-bg:                   #282828;
-  main-fg:                   #EBDBB2;
-  select-bg:                 #83A598;
-  select-fg:                 #EBDBB2;
+  font:                      "Fantasque Sans Mono Regular 15";
+  main-bg:                   #1E1E2E;
+  main-fg:                   #D9E0EE;
+  select-bg:                 #CBA6F7;
+  select-fg:                 #D9E0EE;
 }
 
 //----- Main Window -----//
 window {
   enabled:                   true;
   fullscreen:                false;
-  width:                     100%;
+  width:                     80%;
   transparency:              "real";
   cursor:                    "default";
   spacing:                   0px;
   padding:                   0px;
   border:                    0px;
-  border-radius:             0;
+  border-radius:             10px;
   border-color:              transparent;
   background-color:          transparent;
 }

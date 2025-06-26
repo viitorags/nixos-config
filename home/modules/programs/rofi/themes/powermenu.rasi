@@ -15,7 +15,7 @@ configuration {
 /*****----- Global Properties -----*****/
 
 * {
-    font:                        "JetBrainsMono Nerd Font 15";
+    font:                        "Fantasque Sans Mono Regular 15";
     background: @background;
     background-alt: @background-alt;
     foreground:     @foreground;
@@ -24,7 +24,7 @@ configuration {
     urgent:         @urgent;
 }
 
-@theme "~/.config/rofi/colors/gruvbox.rasi"
+@theme "~/.config/rofi/colors/colors.rasi"
 
 /*
 USE_BUTTONS=YES

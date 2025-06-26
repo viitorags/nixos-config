@@ -12,9 +12,9 @@
     ./programs/zathura
     ./programs/rofi
     ./programs/spicetify
-    ./programs/coding-pkgs.nix
     ./programs/themes
     ./programs/waybar
     ./programs/lazygit
+    ./programs/coding
   ];
 }

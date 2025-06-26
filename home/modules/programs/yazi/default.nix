@@ -4,6 +4,7 @@
     packages = with pkgs; [
       ouch
       glow
+      ripdrag
     ];
   };
 
@@ -36,6 +37,10 @@
           on = [ "C" ];
           run = "plugin ouch";
           desc = "Compress with ouch";
+        }
+        {
+          on = "<C-n>";
+          run = ''shell 'ripdrag "$@" -x 2>/dev/null &' --confirm'';
         }
       ];
     };

@@ -1,26 +1,28 @@
+@define-color bg #1e1e2e; /* base */
+
 * {
   border: none;
-  font-family: "JetBrains Mono Nerd Font";
+  font-family: "Fantasque Sans Mono Regular";
   font-size: 16px;
   font-weight: bold;
   background: none;
 }
 
 window#waybar {
-  color: #fbf1c7;
+  color: #cdd6f4; /* text */
 }
 
 .modules-left,
 .modules-right,
 .modules-center {
   border-radius: 10px;
-  background: #32302f;
+  background: alpha(@bg, 0.8);
   padding: 12px 0;
-  border: solid 2px #d8a657;
+  border: solid 2px #cba6f7; /* yellow */
 }
 
 #custom-sep {
-  color: #494d64;
+  color: #6c7086; /* overlay0 */
   margin: 4px 0;
 }
 
@@ -30,55 +32,51 @@ window#waybar {
 }
 
 #workspaces button {
-  color: #d79920;
+  color: #f9e2af; /* yellow */
   background: none;
   padding: 0;
   transition: all 0.2s ease;
 }
 
 #workspaces button:hover {
-  color: #d3869b;
+  color: #cba6f7; /* mauve */
 }
 
 #workspaces button.active {
-  color: #d79920;
+  color: #f9e2af; /* yellow */
 }
 
 #workspaces button.empty {
-  color: #665c54;
-}
-
-#workspaces button:hover {
-  color: #d3869b;
+  color: #585b70; /* surface2 */
 }
 
 #workspaces button.visible {
-  color: #d79920;
+  color: #f9e2af; /* yellow */
 }
 
 #workspaces button.urgent {
-  color: #ea6962;
+  color: #f38ba8; /* red */
 }
 
 #temperature {
-  color: #d8a657;
+  color: #f9e2af; /* yellow */
 }
 
 #clock {
   font-weight: 600;
-  color: #a9b665;
+  color: #a6e3a1; /* green */
 }
 
 #pulseaudio {
-  color: #7daea3;
+  color: #94e2d5; /* teal */
 }
 
 #pulseaudio.muted {
-  color: #ed8796;
+  color: #f38ba8; /* red */
 }
 
 #network {
-  color: #e78a4e;
+  color: #fab387; /* peach */
 }
 
 #custom-notification {

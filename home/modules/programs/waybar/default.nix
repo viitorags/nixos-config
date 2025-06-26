@@ -32,8 +32,9 @@
           "on-scroll-up" = "hyprctl dispatch workspace e-1";
           "on-scroll-down" = "hyprctl dispatch workspace e+1";
           "format-icons" = {
-            "active" = "";
-            "default" = "";
+            "active" = "";
+            "default" = "";
+            "urgent" = "";
             "empty" = "";
           };
           "persistent-workspaces" = {
@@ -84,21 +85,21 @@
           "on-click-right" = "pavucontrol";
           "tooltip" = false;
           "scroll-step" = 1;
-          "format" = "{icon} {volume}%";
+          "format" = "{icon}&#x2005; {volume}%";
           "format-source" = "";
           "format-source-muted" = "";
-          "format-bluetooth" = "{icon} {volume}%";
-          "format-bluetooth-muted" = "   {volume}%";
-          "format-muted" = "<span>  MUTE</span>";
+          "format-bluetooth" = "{icon}&#x2005;{volume}%";
+          "format-bluetooth-muted" = " &#x2005;&#x2005;{volume}%";
+          "format-muted" = "<span> &#x2005;MUTE</span>";
           "format-icons" = {
-            "headphone" = " ";
-            "hands-free" = " ";
-            "headset" = " ";
-            "phone" = " ";
-            "portable" = " ";
-            "car" = " ";
+            "headphone" = "";
+            "hands-free" = "";
+            "headset" = "";
+            "phone" = "";
+            "portable" = "";
+            "car" = "";
             "default" = [
-              " "
+              ""
             ];
           };
         };

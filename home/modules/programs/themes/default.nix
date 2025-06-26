@@ -9,7 +9,7 @@
   xdg.configFile = {
     "Kvantum/kvantum.kvconfig".text = ''
       [General]
-      theme=gruvbox-kvantum
+      theme=catppuccin-kvantum
     '';
   };
 
@@ -34,13 +34,13 @@
       package = pkgs.papirus-icon-theme;
     };
     theme = {
-      name = "Gruvbox-Dark";
-      package = pkgs.gruvbox-gtk-theme;
+      name = "Catppuccin-GTK-Dark";
+      package = pkgs.magnetic-catppuccin-gtk;
     };
     font = {
-      name = "JetBrainsMono";
+      name = "Fantasque Sans Mono Regular";
     };
   };
 
-  xdg.configFile."Kvantum/gruvbox-kvantum".source = ./gruvbox-kvantum;
+  xdg.configFile."Kvantum/catppuccin-kvantum".source = ./catppuccin-kvantum;
 }

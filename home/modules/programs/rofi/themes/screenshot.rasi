@@ -14,14 +14,16 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "Departure Mono 11";
-    background: #282828;
-    background-alt: #32302f;
-    foreground:     #EBDBB2;
-    selected:       #83A598;
-    active:         #B8BB26;
-    urgent:         #FB4934;
+    font:                        "Fantasque Sans Mono Regular 11";
+    background: @background;
+    background-alt: @background-alt;
+    foreground:     @foreground;
+    selected:       @selected;
+    active:         @active;
+    urgent:         @urgent;
 }
+
+@theme "~/.config/rofi/colors/colors.rasi"
 
 /*
 USE_BUTTONS=YES
@@ -34,7 +36,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       400px;
+    width:                       500px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -80,7 +82,7 @@ textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
     str:                         " ";
-    padding:                     10px 14px 1px;
+    padding:                     8px 12px 1px;
     border-radius:               10px;
     background-color:            @urgent;
     text-color:                  @background;
