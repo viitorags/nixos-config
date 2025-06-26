@@ -4,7 +4,7 @@
 }:
 let
   sddm-astronaut = unstable.sddm-astronaut.override {
-    embeddedTheme = "japanese_aesthetic";
+    embeddedTheme = "purple_leaves";
   };
 in
 {

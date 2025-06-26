@@ -69,7 +69,7 @@
 
   # Fonts
   fonts.packages = with pkgs; [
-    jetbrains-mono
+    fantasque-sans-mono
     font-awesome
     nerd-fonts.jetbrains-mono
   ];
