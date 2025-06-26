@@ -19,8 +19,7 @@
       openshot-qt
       bc
       ibus
-      dwt1-shell-color-scripts
-      # (callPackage ./modules/programs/pokemon-col-sh.nix { }).pokemon-colorscripts
+      gnome.gvfs
     ];
 
     pointerCursor = {
