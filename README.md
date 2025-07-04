@@ -1,14 +1,13 @@
-<div>
-  <h1>My Nixos Config</h1>
+<div align="center">
+<h1>My Nixos Config</h1>
 
-  <p>My NixOs Catppuccin-Mocha-Mauve setup using <a href="">Hyprland</a> and with gruvbox-material theme.</p>
+<p>My NixOs Gruvbox setup using <a href="">Hyprland</a></p>
 
-  <br>
+<br>
 
-  ![GitHub Repo stars](https://img.shields.io/github/stars/viitorags/nixos-config?style=for-the-badge&color=cba6f7)
-  ![GitHub last commit](https://img.shields.io/github/last-commit/viitorags/nixos-config?style=for-the-badge&color=f5c2e7)
-  ![GitHub repo size](https://img.shields.io/github/repo-size/viitorags/nixos-config?style=for-the-badge&color=b4befe)
-
+![GitHub Repo stars](https://img.shields.io/github/stars/viitorags/nixos-config?style=for-the-badge&color=d8a657)
+![GitHub lastcommit](https://img.shields.io/github/last-commit/viitorags/nixos-config?style=for-the-badge&color=a9b665)
+![GitHub repo size](https://img.shields.io/github/repo-size/viitorags/nixos-config?style=for-the-badge&color=7daea3)
 </div>
 
 ## Content
@@ -27,41 +26,41 @@
 ## Previews
 
 <table>
-  <tr>
-    <td><img src="./previews/1750961942_grim.png" width="1000"/></td>
-    <td><img src="./previews/1750961930_grim.png" width="1000"/></td>
-  </tr>
-  <tr>
-    <td><img src="./previews/1750961961_grim.png" width="1000"/></td>
-    <td><img src="./previews/1750962051_grim.png" width="1000"/></td>
-  </tr>
+    <tr>
+        <td><img src="./previews/1751664867_grim.png" width="1000" /></td>
+        <td><img src="./previews/1751664933_grim.png" width="1000" /></td>
+    </tr>
+    <tr>
+        <td><img src="./previews/1751664873_grim.png" width="1000" /></td>
+        <td><img src="./previews/1751664961_grim.png" width="1000" /></td>
+    </tr>
 </table>
 
 ## Keybinds
 > <strong>Note:</strong> $mainMod is set to the SUPER key (usually the Windows key).
 
-|Shortcut                      | Description                                             |                           
-| ---------------------------  | ------------------------------------------------------- |
-|$mainMod + Return             | Opens the terminal                                      |
-|$mainMod + Shift + Return     | Opens a floating terminal with custom position and size |
-|$mainMod + Q                  | Closes the active window                                |
-|$mainMod + Shift + M          | Exits Hyprland                                          |
-|$mainMod + E                  | Opens the file manager (Yazi)                           |
-|$mainMod + T                  | Toggles the window between floating and tiled           |
-|$mainMod + R                  | Toggles fullscreen                                      |
-|$mainMod + A                  | Opens the launcher/menu (Rofi)                          |
-|$mainMod +                    | Runs the custom power menu (Rofi)                       |
-|$mainMod + P                  | Toggles pseudo-tile mode (dwindle)                      |
-|$mainMod + J                  | Toggles horizontal/vertical split (dwindle)             |
-|$mainMod + F                  | Opens the default browser (Brave)                       |
-|$mainMod + Shift + F          | Opens the browser in incognito mode                     |
-|$mainMod + C                  | Opens the default editor (Neovim)                       |
-|$mainMod + Shift + C          | Opens the editor in a floating window                   |
-|$mainMod + W                  | Changes the wallpaper (Rofi)                            |
-|$mainMod + B                  | Restarts Waybar                                         |
-|$mainMod + V                  | Manages clipboard (Rofi)                                |
-|Insert                        | Opens screenshot menu (Rofi)                            |
-|Ctrl + Shift + Insert         | Takes a screenshot of a selected area with grim+slurp   |
+|Shortcut | Description |
+| --------------------------- | ------------------------------------------------------- |
+|$mainMod + Return | Opens the terminal |
+|$mainMod + Shift + Return | Opens a floating terminal with custom position and size |
+|$mainMod + Q | Closes the active window |
+|$mainMod + Shift + M | Exits Hyprland |
+|$mainMod + E | Opens the file manager (Yazi) |
+|$mainMod + T | Toggles the window between floating and tiled |
+|$mainMod + R | Toggles fullscreen |
+|$mainMod + A | Opens the launcher/menu (Rofi) |
+|$mainMod + | Runs the custom power menu (Rofi) |
+|$mainMod + P | Toggles pseudo-tile mode (dwindle) |
+|$mainMod + J | Toggles horizontal/vertical split (dwindle) |
+|$mainMod + F | Opens the default browser (Brave) |
+|$mainMod + Shift + F | Opens the browser in incognito mode |
+|$mainMod + C | Opens the default editor (Neovim) |
+|$mainMod + Shift + C | Opens the editor in a floating window |
+|$mainMod + W | Changes the wallpaper (Rofi) |
+|$mainMod + B | Restarts Waybar |
+|$mainMod + V | Manages clipboard (Rofi) |
+|Insert | Opens screenshot menu (Rofi) |
+|Ctrl + Shift + Insert | Takes a screenshot of a selected area with grim+slurp |
 
 ## Dependencies
 
@@ -100,10 +99,10 @@
 ## Quick Start
 
 ```bash
-    git clone https://github.com/viitorags/nixos-config.git
+git clone https://github.com/viitorags/nixos-config.git
 
-    cd nixos-config
+cd nixos-config
 
-    sudo nixos-rebuild switch --flake .#gh0stk
-    home-manager switch --flake .#gh0stk
+sudo nixos-rebuild switch --flake .#gh0stk
+home-manager switch --flake .#gh0stk
 ```
