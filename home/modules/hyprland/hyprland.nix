@@ -26,16 +26,16 @@
         "swaync"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
-        "hyprctl setcursor catppuccin-mocha-mauve-cursors 24"
+        "hyprctl setcursor Capitaine Cursors (Gruvbox) 24"
         # ''dconf write /org/gnome/desktop/interface/cursor-theme "'Capitaine Cursors (Gruvbox)'"''
       ];
 
       env = [
         "SSH_AUTH_SOCK,/run/user/1000/keyring/ssh"
         "XCURSOR_SIZE,24"
-        "XCURSOR_THEME,catppuccin-mocha-mauve-cursors"
+        "XCURSOR_THEME,Capitaine Cursors (Gruvbox)"
         "HYPRCURSOR_SIZE,24"
-        "HYPRCURSOR_THEME,catppuccin-mocha-mauve-cursors"
+        "HYPRCURSOR_THEME,Capitaine Cursors (Gruvbox)"
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
@@ -56,24 +56,38 @@
 
       animations = {
         enabled = true;
+        first_launch_animation = true;
 
         bezier = [
-          # "overshot,0.05,0.9,0.1,1.1" # Version 1
-          # "overshot,0.13,0.99,0.29,1.09" # Version 2
-          "overshot,0,0.61,0.22,1.12" # Current active
+          "wind, 0.05, 0.9, 0.1, 1.05"
+          "winIn, 0.1, 1.1, 0.1, 1.1"
+          "winOut, 0.3, -0.3, 0, 1"
+          "linear, 1, 1, 1, 1"
+          "Cubic, 0.1, 0.1, 0.1, 1"
+          "overshot, 0.05, 0.9, 0.1, 1.1"
+          "ease-in-out, 0.17, 0.67, 0.83, 0.67"
+          "ease-in, 0.17, 0.67, 0.83, 0.67"
+          "ease-out, 0.42, 0, 1, 1"
+          "easeInOutSine, 0.37, 0, 0.63, 1"
+          "easeInSine, 0.12, 0, 0.39, 0"
+          "easeOutSine, 0.61, 1, 0.88, 1"
         ];
 
         animation = [
-          "windows,1,3,default,slide"
-          "windowsMove,1,3,overshot"
-          "windowsOut,1,3,default,popin"
-          "border,1,1,default"
-          "fadeIn,1,5,default "
-          "fadeOut,1,5,default"
-          "fadeSwitch,1,10,default"
-          "workspaces,1,3.8,overshot,slidevert"
-          "border, 1, 10, overshot"
-          "borderangle, 1, 50, overshot, loop"
+          "windowsIn, 1, 3, easeInOutSine, popin"
+          "windowsOut, 1, 3, easeInOutSine, popin"
+
+          "border, 1, 3, easeInOutSine"
+          "borderangle, 1, 30, easeInOutSine, loop"
+
+          "workspacesIn, 1, 3, easeInOutSine, slidefade"
+          "workspacesOut, 1, 3, easeInOutSine, slidefade"
+
+          "specialWorkspaceIn, 1, 3, easeInOutSine, slidevert"
+          "specialWorkspaceOut, 1, 3, easeInOutSine, slidevert"
+
+          "layersIn, 1, 3, easeInOutSine, fade"
+          "layersOut, 1, 3, easeInOutSine, fade"
         ];
       };
 
@@ -127,7 +141,7 @@
         "$mainMod SHIFT, F, exec, brave --incognito"
         "$mainMod, C, exec, $editor"
         "bind=$mainMod SHIFT, C, exec, [float; move 15% 5%; size 70% 90%] $editor"
-        "$mainMod, W, exec, bash -c ~/nixos-config/home/modules/hyprland/scripts/wallpaper_change.sh"
+        "$mainMod, W, exec, bash -ic '~/nixos-config/home/modules/hyprland/scripts/wallpaper_change.sh'"
         "$mainMod, B, exec, pkill waybar || waybar"
         "$mainMod, L, exec, wlogout"
         "$mainMod, V, exec, bash -c ~/nixos-config/home/modules/hyprland/scripts/clipboard.sh"
@@ -216,39 +230,39 @@
 
           border_size = 2
 
-          col.active_border = rgba(cba6f7ff)
+          col.active_border = rgba(d79921ff)
           col.inactive_border = rgba(414868aa)
 
-          resize_on_border = false
+          resize_on_border = true
 
           allow_tearing = false
 
           layout = dwindle
       }
 
-         decoration {
-          rounding = 5
-          # rounding_power = 2
+      decoration {
+        rounding = 5
+        rounding_power = 10
 
-          active_opacity = 0.8
-          inactive_opacity = 0.7
+        active_opacity = 0.8
+        inactive_opacity = 0.7
 
-          fullscreen_opacity = 1
+        fullscreen_opacity = 1
 
-          shadow {
-                  enabled = false
-                  range = 4
-                  render_power = 3
-                  color = rgba(1a1a1aee)
-          }
-
-          blur {
-                  enabled = true
-                  size = 2
-                  passes = 5
-                  vibrancy = 2
-          }
-         }
+        shadow {
+          enabled = false
+          range = 4
+          render_power = 3
+          color = rgba(1a1a1aee)
+        }
+          
+        blur {
+          enabled = true
+          size = 2
+          passes = 5
+          vibrancy = 2
+        }
+      }
     '';
   };
 }

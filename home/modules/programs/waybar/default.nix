@@ -10,6 +10,7 @@
         "margin-top" = 5;
         "margin-bottom" = 5;
         "margin-left" = 2;
+        "gtk-layer-shell" = true;
         "modules-left" = [
           "clock"
           "custom/sep"
@@ -17,7 +18,7 @@
         ];
         "modules-center" = [ "hyprland/workspaces" ];
         "modules-right" = [
-          "temperature"
+          "memory"
           "custom/sep"
           "pulseaudio"
           "custom/sep"
@@ -33,9 +34,8 @@
           "on-scroll-down" = "hyprctl dispatch workspace e+1";
           "format-icons" = {
             "active" = "";
-            "default" = "";
-            "urgent" = "";
-            "empty" = "";
+            "default" = "";
+            "urgent" = "";
           };
           "persistent-workspaces" = {
             "1" = [ ];
@@ -58,18 +58,17 @@
         };
 
         "custom/notification" = {
-          "rotate" = 90;
           "tooltip" = false;
           "format" = "{icon}";
           "format-icons" = {
-            "notification" = "<span foreground='red'><sup></sup></span>";
-            "none" = "";
-            "dnd-notification" = "<span foreground='red'><sup></sup></span>";
-            "dnd-none" = "";
-            "inhibited-notification" = "<span foreground='red'><sup></sup></span>";
-            "inhibited-none" = "";
-            "dnd-inhibited-notification" = "<span foreground='red'><sup></sup></span>";
-            "dnd-inhibited-none" = "";
+            "notification" = "&#x2005;<span foreground='red'><sup>•</sup></span>";
+            "none" = "";
+            "dnd-notification" = "&#x2005;<span foreground='red'><sup>•</sup></span>";
+            "dnd-none" = "&#x2005;";
+            "inhibited-notification" = "&#x2005;<span foreground='red'><sup>•</sup></span>";
+            "inhibited-none" = "";
+            "dnd-inhibited-notification" = "&#x2005;<span foreground='red'><sup>•</sup></span>";
+            "dnd-inhibited-none" = "&#x2005;";
           };
           "return-type" = "json";
           "exec-if" = "which swaync-client";
@@ -162,7 +161,9 @@
         };
 
         "memory" = {
-          "format" = "󰋊";
+          "rotate" = 90;
+          "format" = "󰋊 {}%";
+          "on-click" = "kitty btop";
         };
 
         "custom/expand" = {
@@ -172,6 +173,7 @@
 
         "tray" = {
           "icon-size" = 18;
+          "spacing" = 4;
           "show-passive-items" = true;
           "tooltip" = true;
         };

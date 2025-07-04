@@ -1,17 +1,11 @@
 #!/usr/bin/env bash
 export PATH="$PATH:/run/current-system/sw/bin:/etc/profiles/per-user/$USER/bin:$HOME/.nix-profile/bin"
-echo "$PATH" >/tmp/wallpaper_script_path.log
 wall_dir="$HOME/nixos-config/assets/wallpapers/"
 cacheDir="$HOME/.cache/jp/"
 
 if [ ! -d "$cacheDir" ]; then
     mkdir -p "$cacheDir"
 fi
-
-# physical_monitor_size=24
-# monitor_res=$(hyprctl monitors | grep -A2 Monitor | head -n 2 | awk '{print $1}' | grep -oE '^[0-9]+')
-# dotsperinch=$(echo "scale=2; $monitor_res / $physical_monitor_size" | bc | xargs printf "%.0f")
-# monitor_res=$(($monitor_res * $physical_monitor_size / $dotsperinch))
 
 {
     for imagen in "$wall_dir"/*.{jpg,jpeg,png,webp,gif}; do
@@ -30,7 +24,7 @@ wall_selection=$(find "$wall_dir" -maxdepth 1 -type f \( -iname "*.jpg" -o -inam
     -printf "%f\n" | shuf | awk -v cache="$cacheDir" '{printf "%s\x00icon\x1f%s/%s\n", $0, cache, $0}' | $rofi_command)
 
 [[ -n "$wall_selection" ]] || exit 1
-swww img $wall_dir/$wall_selection --transition-step 10 --transition-fps 30 --transition-type center &
+swww img "$wall_dir/$wall_selection" --transition-step 10 --transition-fps 30 --transition-type center &
 wallpaper_path="$wall_dir/$wall_selection"
 mkdir -p ~/.cache/img-symbol
 ln -sf "$wallpaper_path" ~/.cache/img-symbol/current.wallpaper

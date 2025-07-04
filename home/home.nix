@@ -20,13 +20,14 @@
       bc
       ibus
       gnome.gvfs
+      libreoffice-qt6
     ];
 
     pointerCursor = {
       gtk.enable = true;
       x11.enable = true;
-      name = "catppuccin-mocha-mauve-cursors";
-      package = pkgs.catppuccin-cursors.mochaMauve;
+      name = "Capitaine Cursors (Gruvbox)";
+      package = pkgs.capitaine-cursors-themed;
       size = 24;
     };
 

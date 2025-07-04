@@ -3,15 +3,15 @@
  * Author : Aditya Shakya (adi1090x)
  * Github : @adi1090x
  * 
- * Colors
+ * Colors - Gruvbox Material Dark Medium
  **/
 
 * {
-    background:     #1E1E2E; /* base */
-    background-alt: #181825; /* mantle */
-    foreground:     #D9E0EE; /* text */
-    selected:       #CBA6F7; /* mauve */
-    active:         #A6E3A1; /* green */
-    urgent:         #F38BA8; /* red */
+    background:     #282828;  /* bg0 */
+    background-alt: #32302f;  /* bg1 */
+    foreground:     #ebdbb2;  /* fg */
+    selected:       #d3869b;  /* purple */
+    active:         #b8bb26;  /* green */
+    urgent:         #fb4934;  /* red */
 }
 

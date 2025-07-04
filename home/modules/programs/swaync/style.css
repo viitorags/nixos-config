@@ -1,12 +1,12 @@
-@define-color cc-bg rgba(30, 30, 46, 0.7); /* base */
-@define-color noti-bg rgba(49, 50, 68, 0.7); /* surface0 */
-@define-color noti-bg-darker rgba(24, 24, 37, 0.7); /* mantle */
-@define-color noti-border-color #cba6f7; /* yellow */
-@define-color noti-bg-hover rgb(49, 50, 68); /* surface0 */
-@define-color noti-bg-focus rgba(24, 24, 37, 0.7); /* mantle */
-@define-color text-color #cdd6f4; /* text */
-@define-color text-color-disabled #9399b2; /* overlay2 */
-@define-color bg-selected rgba(245, 194, 231, 0.7); /* pink */
+@define-color cc-bg rgba(60, 56, 54, 0.7); /* bg */
+@define-color noti-bg rgba(50, 48, 47, 0.7); /* bg0 */
+@define-color noti-bg-darker rgba(40, 40, 40, 0.7); /* bg0_h */
+@define-color noti-border-color #d79921; /* yellow */
+@define-color noti-bg-hover rgb(50, 48, 47); /* bg0 */
+@define-color noti-bg-focus rgba(40, 40, 40, 0.7); /* bg0_h */
+@define-color text-color #ebdbb2; /* fg */
+@define-color text-color-disabled #a89984; /* gray */
+@define-color bg-selected rgba(177, 98, 134, 0.7); /* pink (gruvbox fusion) */
 
 * {
   font-family: Fantasque Sans Mono Regular;
@@ -40,7 +40,7 @@
 }
 
 .close-button {
-  background: #f9e2af; /* yellow */
+  background: #fabd2f; /* yellow */
   color: @cc-bg;
   text-shadow: none;
   padding: 0;
@@ -51,13 +51,13 @@
 
 .close-button:hover {
   box-shadow: none;
-  background: #fabe87; /* peach */
+  background: #fe8019; /* orange */
   transition: all 0.15s ease-in-out;
   border: none;
 }
 
 .notification-action {
-  color: #cdd6f4;
+  color: #ebdbb2;
   border: 2px solid @noti-border-color;
   border-top: none;
   border-radius: 10px;
@@ -66,25 +66,25 @@
 
 .notification-default-action:hover,
 .notification-action:hover {
-  color: #cdd6f4;
+  color: #ebdbb2;
   background: @noti-bg-darker;
 }
 
 .summary {
   padding-top: 7px;
   font-size: 13px;
-  color: #cdd6f4;
+  color: #ebdbb2;
 }
 
 .time {
   font-size: 11px;
-  color: #f9e2af;
+  color: #fabd2f;
   margin-right: 24px;
 }
 
 .body {
   font-size: 12px;
-  color: #cdd6f4;
+  color: #ebdbb2;
 }
 
 .control-center {
@@ -124,7 +124,7 @@
 }
 
 .widget-title > button:hover {
-  background: #f9e2af;
+  background: #fabd2f;
   color: @cc-bg;
 }
 
@@ -135,13 +135,13 @@ trough {
 
 trough highlight {
   padding: 2px;
-  background: #f9e2af;
+  background: #fabd2f;
   border: none;
 }
 
 trough slider {
-  border-color: #f9e2af;
-  background: rgb(30, 30, 46);
+  border-color: #fabd2f;
+  background: rgb(60, 56, 54);
   box-shadow: none;
 }
 
@@ -151,17 +151,17 @@ trough slider {
   margin: 5px 10px 10px 10px;
   border-radius: 10px;
   font-size: large;
-  color: #f5e0dc;
+  color: #fbf1c7;
 }
 
 .widget-dnd > switch {
   border-radius: 4px;
-  background: #585b70;
+  background: #665c54;
 }
 
 .widget-dnd > switch:checked {
-  background: #f9e2af;
-  border: 1px solid #f9e2af;
+  background: #fabd2f;
+  border: 1px solid #fabd2f;
 }
 
 .widget-dnd > switch slider {
@@ -227,7 +227,7 @@ trough slider {
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
-  background: #f9e2af;
+  background: #fabd2f;
   color: @cc-bg;
 }
 

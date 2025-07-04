@@ -25,6 +25,6 @@
       ];
 
       theme = spicePkgs.themes.text;
-      colorScheme = "CatppuccinMocha";
+      colorScheme = "Gruvbox";
     };
 }

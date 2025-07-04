@@ -1,4 +1,4 @@
-@define-color bg #1e1e2e; /* base */
+@define-color bg #282828;
 
 * {
   border: none;
@@ -9,20 +9,31 @@
 }
 
 window#waybar {
-  color: #cdd6f4; /* text */
+  color: #ebdbb2;
 }
 
 .modules-left,
 .modules-right,
 .modules-center {
   border-radius: 10px;
-  background: alpha(@bg, 0.8);
+  background: alpha(@bg, 0.6);
   padding: 12px 0;
-  border: solid 2px #cba6f7; /* yellow */
+  border: solid 2px #d79921;
+}
+
+tooltip {
+  color: #83a598;
+  background-color: #282828;
+  text-shadow: none;
+}
+
+tooltip * {
+  color: #83a598;
+  text-shadow: none;
 }
 
 #custom-sep {
-  color: #6c7086; /* overlay0 */
+  color: #a89984;
   margin: 4px 0;
 }
 
@@ -32,53 +43,55 @@ window#waybar {
 }
 
 #workspaces button {
-  color: #f9e2af; /* yellow */
+  color: #fe8019;
   background: none;
   padding: 0;
-  transition: all 0.2s ease;
 }
 
 #workspaces button:hover {
-  color: #cba6f7; /* mauve */
+  color: #fabd2f;
 }
 
 #workspaces button.active {
-  color: #f9e2af; /* yellow */
+  color: #b8bb26;
 }
 
 #workspaces button.empty {
-  color: #585b70; /* surface2 */
+  color: #928374;
 }
 
 #workspaces button.visible {
-  color: #f9e2af; /* yellow */
+  color: #8ec07c;
 }
 
 #workspaces button.urgent {
-  color: #f38ba8; /* red */
+  color: #fb4934;
 }
 
-#temperature {
-  color: #f9e2af; /* yellow */
+#memory {
+  color: #fe8019;
 }
 
 #clock {
   font-weight: 600;
-  color: #a6e3a1; /* green */
+  color: #b8bb26;
 }
 
 #pulseaudio {
-  color: #94e2d5; /* teal */
+  color: #83a598;
 }
 
 #pulseaudio.muted {
-  color: #f38ba8; /* red */
+  color: #fb4934;
 }
 
 #network {
-  color: #fab387; /* peach */
+  color: #8ec07c;
 }
 
 #custom-notification {
-  padding-top: 15px;
+  color: #d3869b;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 7px;
 }

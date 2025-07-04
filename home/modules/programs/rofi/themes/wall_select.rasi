@@ -11,10 +11,10 @@ configuration {
 //----- Global Properties -----//
 * {
   font:                      "Fantasque Sans Mono Regular 15";
-  main-bg:                   #1E1E2E;
-  main-fg:                   #D9E0EE;
-  select-bg:                 #CBA6F7;
-  select-fg:                 #D9E0EE;
+  main-bg:                   #282828;
+  main-fg:                   #ebdbb2;
+  select-bg:                 #d3869b;
+  select-fg:                 #ebdbb2;
 }
 
 //----- Main Window -----//
