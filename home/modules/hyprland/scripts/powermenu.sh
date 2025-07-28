@@ -15,31 +15,32 @@ theme='powermenu'
 wallpaper_path=$(swww query | sed -n 's/.*currently displaying: image: \(.*\)/\1/p')
 
 # CMDs
-lastlogin="`last $USER | head -n1 | tr -s ' ' | cut -d' ' -f5,6,7`"
-uptime="`uptime | awk -F'up ' '{split($2,a,","); print a[1]}'`"
-host=`hostname`
+lastlogin="$(last $USER | head -n1 | tr -s ' ' | cut -d' ' -f5,6,7)"
+uptime="$(uptime | awk -F'up ' '{split($2,a,","); print a[1]}')"
+host=$(hostname)
 
 # Options
 #hibernate='󰒲'   # nf-md-weather_snowy
-shutdown=' '     # nf-fa-power_off
-reboot='󰜉 '       # nf-md-restart
-lock=' '         # nf-fa-lock
-suspend='󰤄 '      # nf-md-sleep
-logout=' '       # nf-fa-sign_out
-yes=' '          # nf-fa-check
-no=' '           # nf-fa-times
+shutdown=' ' # nf-fa-power_off
+reboot='󰜉 '   # nf-md-restart
+lock=' '     # nf-fa-lock
+suspend='󰤄 '  # nf-md-sleep
+logout=' '   # nf-fa-sign_out
+yes=' '      # nf-fa-check
+no=' '       # nf-fa-times
 
 # Rofi CMD
 rofi_cmd() {
     rofi -dmenu \
         -p "$USER@$host" \
         -mesg " Uptime: $uptime" \
-        -theme ${dir}/${theme}.rasi  \
-      # -theme-str "inputbar { background-image: url(\"$wallpaper_path\", width); }"
+        -theme ${dir}/${theme}.rasi \
+        -theme-str 'element {border: 2px solid;}'
+    # -theme-str "inputbar { background-image: url(\"$wallpaper_path\", width); }"
 }
 
 confirm_cmd() {
-    rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 350px;}' \
+    rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 350px; background-color: #282828;}' \
         -theme-str 'mainbox {orientation: vertical; children: [ "message", "listview" ];}' \
         -theme-str 'listview {columns: 2; lines: 1;}' \
         -theme-str 'element-text {horizontal-align: 0.6;}' \
@@ -97,22 +98,22 @@ run_cmd() {
 # Actions
 chosen="$(run_rofi)"
 case ${chosen} in
-    $shutdown)
-        run_cmd --shutdown
-        ;;
-    $reboot)
-        run_cmd --reboot
-        ;;
-    $hibernate)
-        run_cmd --hibernate
-        ;;
-    $lock)
-        run_cmd --lock
-            ;;
-    $suspend)
-        run_cmd --suspend
-        ;;
-    $logout)
-        run_cmd --logout
-        ;;
+$shutdown)
+    run_cmd --shutdown
+    ;;
+$reboot)
+    run_cmd --reboot
+    ;;
+$hibernate)
+    run_cmd --hibernate
+    ;;
+$lock)
+    run_cmd --lock
+    ;;
+$suspend)
+    run_cmd --suspend
+    ;;
+$logout)
+    run_cmd --logout
+    ;;
 esac

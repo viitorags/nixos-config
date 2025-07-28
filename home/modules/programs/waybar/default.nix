@@ -84,7 +84,7 @@
           "on-click-right" = "pavucontrol";
           "tooltip" = false;
           "scroll-step" = 1;
-          "format" = "{icon}&#x2005; {volume}%";
+          "format" = "{icon}&#x2005;  {volume}%";
           "format-source" = "";
           "format-source-muted" = "";
           "format-bluetooth" = "{icon}&#x2005;{volume}%";
@@ -104,14 +104,13 @@
         };
 
         "network" = {
-          "rotate" = 90;
           "interface" = "wlo1";
           "format" = "{ifname}";
-          "format-wifi" = "<span> </span>";
+          "format-wifi" = "&#x2005;<span> </span>";
           "format-ethernet" = "{ipaddr}/{cidr} ";
-          "format-disconnected" = "<span>󰖪 </span>No Network";
+          "format-disconnected" = "&#x2005;<span>󰖪 </span>";
           "tooltip" = false;
-          "on-click" = "kitty nmtui";
+          "on-click" = "wezterm start -- nmtui";
         };
 
         "bluetooth" = {
@@ -163,7 +162,7 @@
         "memory" = {
           "rotate" = 90;
           "format" = "󰋊 {}%";
-          "on-click" = "kitty btop";
+          "on-click" = "wezterm start -- btop";
         };
 
         "custom/expand" = {

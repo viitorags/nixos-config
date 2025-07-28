@@ -13,8 +13,6 @@
     python313
     nodejs
     nodePackages.live-server
-    dotnet-sdk_9
-    netcoredbg
     gcc
     gnumake
     lazydocker
@@ -22,6 +20,7 @@
     fd
     ripgrep
     go
+    php
 
     # Formatters
     nixfmt-rfc-style
@@ -31,6 +30,7 @@
     nodePackages.prettier
 
     # LSP
+    nodePackages.intelephense
     nodePackages.vscode-langservers-extracted
     nodePackages.typescript-language-server
     nodePackages.eslint_d
@@ -40,12 +40,11 @@
     bash-language-server
     lua-language-server
     clang-tools
-    jdt-language-server
-    roslyn-ls
     gopls
     # (texlive.combine {
     #   inherit (texlive) scheme-medium latexmk;
     # })
     nixd
+    kdePackages.qtdeclarative
   ];
 }

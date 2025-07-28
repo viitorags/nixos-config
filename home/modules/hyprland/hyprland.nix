@@ -11,11 +11,11 @@
     settings = {
       monitor = ",preferred,auto,auto";
 
-      "$terminal" = "kitty";
-      "$fileManager" = "kitty yazi";
+      "$terminal" = "wezterm start";
+      "$fileManager" = "wezterm start -- yazi";
       "$menu" = "bash -c ~/nixos-config/home/modules/hyprland/scripts/launcher.sh";
       "$browser" = "brave";
-      "$editor" = "kitty -e zsh -ic nvim";
+      "$editor" = "wezterm -e zsh -ic nvim";
 
       exec-once = [
         "dbus-update-activation-environment --systemd --all"
@@ -241,8 +241,8 @@
       }
 
       decoration {
-        rounding = 5
-        rounding_power = 10
+        rounding = 0
+        rounding_power = 0
 
         active_opacity = 0.8
         inactive_opacity = 0.7

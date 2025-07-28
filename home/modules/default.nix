@@ -2,7 +2,7 @@
   imports = [
     ./hyprland/default.nix
     ./programs/fastfetch
-    ./programs/kitty
+    ./programs/wezterm
     ./programs/swaync
     ./programs/yazi
     ./programs/btop

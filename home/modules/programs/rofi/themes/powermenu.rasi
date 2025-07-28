@@ -15,8 +15,8 @@ configuration {
 /*****----- Global Properties -----*****/
 
 * {
-    font:                        "Fantasque Sans Mono Regular 15";
-    background: @background;
+    font:                        "Sarasa Gothic CL 15";
+    background:     @background;
     background-alt: @background-alt;
     foreground:     @foreground;
     selected:       @selected;
@@ -49,7 +49,7 @@ window {
     border-radius:               5px;
     border-color:                @selected;
     cursor:                      "default";
-    background-color:            @background;
+    background-color:            rgba(0, 0, 0, 0);
 }
 
 /*****----- Main Box -----*****/

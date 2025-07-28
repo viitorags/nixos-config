@@ -38,7 +38,7 @@
       package = pkgs.gruvbox-gtk-theme;
     };
     font = {
-      name = "Fantasque Sans Mono Regular";
+      name = "Sarasa Gothic CL";
     };
   };
 

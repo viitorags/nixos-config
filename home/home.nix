@@ -20,7 +20,6 @@
       bc
       ibus
       gnome.gvfs
-      libreoffice-qt6
     ];
 
     pointerCursor = {
@@ -34,7 +33,7 @@
     sessionVariables = {
       QT_QUICK_CONTROLS_STYLE = "Kvantum";
       GTK_IM_MODULE = "ibus";
-      TERMINAL = "kitty";
+      TERMINAL = "wezterm";
     };
 
   };

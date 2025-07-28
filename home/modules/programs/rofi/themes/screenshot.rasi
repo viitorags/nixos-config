@@ -14,7 +14,7 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "Fantasque Sans Mono Regular 11";
+    font:                        "Sarasa Gothic CL 15";
     background: @background;
     background-alt: @background-alt;
     foreground:     @foreground;

@@ -9,12 +9,14 @@ configuration {
 }
 
 //----- Global Properties -----//
+@theme "~/.config/rofi/colors/colors.rasi"
+
 * {
-  font:                      "Fantasque Sans Mono Regular 15";
-  main-bg:                   #282828;
-  main-fg:                   #ebdbb2;
-  select-bg:                 #d3869b;
-  select-fg:                 #ebdbb2;
+  font:                      "Sarasa Gothic CL 15";
+  main-bg:                   @background;
+  main-fg:                   @foreground;
+  select-bg:                 @selected;
+  select-fg:                 @foreground;
 }
 
 //----- Main Window -----//

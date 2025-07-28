@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -19,6 +18,7 @@
         ls = "eza -ha --icons=auto --sort=name --group-directories-first";
         ll = "eza -lh --icons=auto";
         ff = "fastfetch";
+        clear = "clear && printf $'\\033c'";
       };
 
     initContent = ''
