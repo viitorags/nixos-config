@@ -20,6 +20,7 @@
       bc
       ibus
       gnome.gvfs
+      flatpak
     ];
 
     pointerCursor = {
