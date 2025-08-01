@@ -13,5 +13,6 @@
     ./polkit.nix
     ./kdeconnect.nix
     ./udev.nix
+    ./flatpak.nix
   ];
 }

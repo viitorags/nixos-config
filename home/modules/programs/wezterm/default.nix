@@ -23,10 +23,7 @@
           font = wezterm.font("Sarasa Mono TC", { weight = "Bold", stretch = "Normal", style = "Italic" }),
         },
       }
-      config.color_scheme = "Gruvbox Material (Gogh)"
-      config.colors = {
-        background = "#32302f"
-      }
+      config.color_scheme = "Catppuccin Macchiato (Gogh)"
       config.custom_block_glyphs = false
       config.mouse_wheel_scrolls_tabs = false
       config.warn_about_missing_glyphs = false

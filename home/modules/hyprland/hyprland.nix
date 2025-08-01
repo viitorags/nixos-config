@@ -26,16 +26,16 @@
         "swaync"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
-        "hyprctl setcursor Capitaine Cursors (Gruvbox) 24"
+        "hyprctl setcursor catppuccin-macchiato-mauve-cursors 24"
         # ''dconf write /org/gnome/desktop/interface/cursor-theme "'Capitaine Cursors (Gruvbox)'"''
       ];
 
       env = [
         "SSH_AUTH_SOCK,/run/user/1000/keyring/ssh"
         "XCURSOR_SIZE,24"
-        "XCURSOR_THEME,Capitaine Cursors (Gruvbox)"
+        "XCURSOR_THEME,catppuccin-macchiato-mauve-cursors"
         "HYPRCURSOR_SIZE,24"
-        "HYPRCURSOR_THEME,Capitaine Cursors (Gruvbox)"
+        "HYPRCURSOR_THEME,catppuccin-macchiato-mauve-cursors"
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"

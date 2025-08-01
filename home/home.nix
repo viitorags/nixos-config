@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{
+  pkgs,
+  quickshell,
+  ...
+}:
 {
   imports = [
     ./modules/default.nix
@@ -20,14 +24,15 @@
       bc
       ibus
       gnome.gvfs
-      flatpak
+      quickshell.packages.${pkgs.system}.default
+      imagemagick
     ];
 
     pointerCursor = {
       gtk.enable = true;
       x11.enable = true;
-      name = "Capitaine Cursors (Gruvbox)";
-      package = pkgs.capitaine-cursors-themed;
+      name = "catppuccin-macchiato-mauve-cursors";
+      package = pkgs.catppuccin-cursors.macchiatoMauve;
       size = 24;
     };
 
@@ -36,6 +41,5 @@
       GTK_IM_MODULE = "ibus";
       TERMINAL = "wezterm";
     };
-
   };
 }

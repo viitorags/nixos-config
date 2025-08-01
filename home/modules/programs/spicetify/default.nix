@@ -24,7 +24,7 @@
         keyboardShortcut
       ];
 
-      theme = spicePkgs.themes.text;
-      colorScheme = "Gruvbox";
+      theme = spicePkgs.themes.comfy;
+      colorScheme = "catppuccin-macchiato";
     };
 }

@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+
   qt = {
     enable = true;
     platformTheme.name = "qt5ct";
@@ -9,10 +10,12 @@
   xdg.configFile = {
     "Kvantum/kvantum.kvconfig".text = ''
       [General]
-      theme=gruvbox-kvantum
+      theme=catppuccin-macchiato-mauve
     '';
-  };
 
+    "Kvantum/catppuccin-macchiato-mauve/".source = ./catppuccin-kvantum;
+
+  };
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
@@ -34,13 +37,11 @@
       package = pkgs.gruvbox-plus-icons;
     };
     theme = {
-      name = "Gruvbox-Dark";
-      package = pkgs.gruvbox-gtk-theme;
+      name = "Catppuccin-GTK-Dark";
+      package = pkgs.magnetic-catppuccin-gtk;
     };
     font = {
       name = "Sarasa Gothic CL";
     };
   };
-
-  xdg.configFile."Kvantum/gruvbox-kvantum".source = ./gruvbox-kvantum;
 }

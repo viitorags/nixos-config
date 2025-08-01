@@ -27,14 +27,14 @@ run_rofi() {
 
 run_cmd() {
     if [[ $1 == '--option_0' ]]; then
-        sleep 0.3 && grim $(xdg-user-dir)/Pictures/Screenshots/$(date +'%s_grim.png')
+        sleep 0.5 && grim $(xdg-user-dir)/Pictures/Screenshots/$(date +'%s_grim.png')
         notify-send -i camera -t 1000 "Screenshot saved" "Location: ${dir_screenshot}"
     elif [[ $1 == '--option_1' ]]; then
-        sleep 0.3 && grim -g "$(slurp)" $(xdg-user-dir)/Pictures/Screenshots/$(date +'%s_grim.png')
+        sleep 0.5 && grim -g "$(slurp)" $(xdg-user-dir)/Pictures/Screenshots/$(date +'%s_grim.png')
         notify-send -i camera -t 1000 "Area screenshot saved" "Location: ${dir_screenshot}"
     elif [[ $1 == '--option_2' ]]; then
         coords=$(hyprctl activewindow -j | jq -r '"\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"')
-        sleep 0.3 && grim -g "$coords" $(xdg-user-dir)/Pictures/Screenshots/$(date +'%s_grim.png')
+        sleep 0.5 && grim -g "$coords" $(xdg-user-dir)/Pictures/Screenshots/$(date +'%s_grim.png')
         notify-send -i camera -t 1000 "Window screenshot saved" "Location: ${dir_screenshot}"
     elif [[ $1 == '--option_3' ]]; then
         sleep 5 && grim $(xdg-user-dir)/Pictures/Screenshots/$(date +'%s_grim.png')

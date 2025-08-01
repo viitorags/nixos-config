@@ -15,6 +15,11 @@
       url = "github:Gerg-L/spicetify-nix";
     };
 
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
   };
 
   outputs =
@@ -23,6 +28,7 @@
       home-manager,
       nixpkgs-unstable,
       spicetify-nix,
+      quickshell,
       ...
     }@inputs:
     let
@@ -58,6 +64,7 @@
           inherit inputs;
           inherit unstable;
           inherit spicetify-nix;
+          inherit quickshell;
         };
       };
     };

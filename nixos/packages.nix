@@ -11,6 +11,7 @@
     gparted
     mpv
     (callPackage ./modules/huiontablet/default.nix { })
+    exfatprogs
 
     # CLI utils
     tree
@@ -63,7 +64,6 @@
     kdePackages.qtstyleplugin-kvantum
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qtgraphicaleffects
-    papirus-nord
     cowsay
     cmatrix
   ];
