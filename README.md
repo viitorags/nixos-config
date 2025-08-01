@@ -21,7 +21,7 @@
 ## Notes
 
 > <strong>Note:</strong> Hyprlock wallpaper is changed every time you change wallpaper
-<br />
+
 > <strong>Note:</strong> Digitizing table driver and installed (Huion Inspiroy H430p)
 
 ## Previews
