@@ -21,18 +21,17 @@
 ## Notes
 
 > <strong>Note:</strong> Hyprlock wallpaper is changed every time you change wallpaper
-> <strong>Note:</strong> Digitizing table driver and installed
+<br />
+> <strong>Note:</strong> Digitizing table driver and installed (Huion Inspiroy H430p)
 
 ## Previews
 
 <table>
     <tr>
-        <td><img src="./previews/1751664867_grim.png" width="1000" /></td>
-        <td><img src="./previews/1751664933_grim.png" width="1000" /></td>
+        <td><img src="./.previews/1754010227_grim.png" width="1000" /></td>
     </tr>
     <tr>
-        <td><img src="./previews/1751664873_grim.png" width="1000" /></td>
-        <td><img src="./previews/1751664961_grim.png" width="1000" /></td>
+        <td><img src="./.previews/1754010244_grim.png" width="1000" /></td>
     </tr>
 </table>
 
@@ -67,7 +66,7 @@
 - [Hyprland](https://github.com/hyprwm/Hyprland)
 - [Waybar](https://github.com/Alexays/Waybar)
 - [Rofi](https://github.com/davatorium/rofi)
-- [Kitty](https://github.com/kovidgoyal/kitty)
+- [Wezterm](https://github.com/wezterm/wezterm)
 - [Zsh](https://www.zsh.org/) + [Oh My Zsh](https://ohmyz.sh/)
 - [Yazi](https://github.com/sxyazi/yazi)
 - [Zathura](https://pwmt.org/projects/zathura/)
