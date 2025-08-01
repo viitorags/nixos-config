@@ -1,13 +1,13 @@
 <div align="center">
 <h1>My Nixos Config</h1>
 
-<p>My NixOs Gruvbox setup using <a href="">Hyprland</a></p>
+<p>My NixOs setup using <a href="">Hyprland</a></p>
 
 <br>
 
-![GitHub Repo stars](https://img.shields.io/github/stars/viitorags/nixos-config?style=for-the-badge&color=d8a657)
-![GitHub lastcommit](https://img.shields.io/github/last-commit/viitorags/nixos-config?style=for-the-badge&color=a9b665)
-![GitHub repo size](https://img.shields.io/github/repo-size/viitorags/nixos-config?style=for-the-badge&color=7daea3)
+![GitHub Repo stars](https://img.shields.io/github/stars/viitorags/nixos-config?style=for-the-badge&color=8aadf4)
+![GitHub lastcommit](https://img.shields.io/github/last-commit/viitorags/nixos-config?style=for-the-badge&color=f5a97f)
+![GitHub repo size](https://img.shields.io/github/repo-size/viitorags/nixos-config?style=for-the-badge&color=a6da95)
 </div>
 
 ## Content
