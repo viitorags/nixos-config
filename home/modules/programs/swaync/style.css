@@ -1,12 +1,12 @@
-@define-color cc-bg rgba(60, 56, 54, 0.7); /* bg */
-@define-color noti-bg rgba(50, 48, 47, 0.7); /* bg0 */
-@define-color noti-bg-darker rgba(40, 40, 40, 0.7); /* bg0_h */
-@define-color noti-border-color #d79921; /* yellow */
-@define-color noti-bg-hover rgb(50, 48, 47); /* bg0 */
-@define-color noti-bg-focus rgba(40, 40, 40, 0.7); /* bg0_h */
-@define-color text-color #ebdbb2; /* fg */
-@define-color text-color-disabled #a89984; /* gray */
-@define-color bg-selected rgba(177, 98, 134, 0.7); /* pink (gruvbox fusion) */
+@define-color cc-bg rgba(36, 39, 58, 0.7);
+@define-color noti-bg rgba(30, 32, 48, 0.7);
+@define-color noti-bg-darker rgba(24, 25, 38, 0.7);
+@define-color noti-border-color #f5a97f;
+@define-color noti-bg-hover rgb(30, 32, 48);
+@define-color noti-bg-focus rgba(24, 25, 38, 0.7);
+@define-color text-color #cad3f5;
+@define-color text-color-disabled #a5adcb;
+@define-color bg-selected rgba(198, 160, 246, 0.7);
 
 * {
   font-family: Fantasque Sans Mono Regular;
@@ -24,73 +24,75 @@
   outline: none;
   margin-top: 0.15rem;
   padding: 0;
+  border: none;
 }
 
 .notification {
   background: transparent;
   margin: 0px;
+  border: none;
 }
 
 .notification-content {
   background: @cc-bg;
   padding: 7px;
-  border-radius: 0px;
+  border-radius: 10px;
   border: 2px solid @noti-border-color;
   margin: 0;
 }
 
 .close-button {
-  background: #fabd2f; /* yellow */
+  background: #f4dbd6;
   color: @cc-bg;
   text-shadow: none;
   padding: 0;
-  border-radius: 0px;
+  border-radius: 10px;
   margin-top: 5px;
   margin-right: 5px;
 }
 
 .close-button:hover {
   box-shadow: none;
-  background: #fe8019; /* orange */
+  background: #f5a97f;
   transition: all 0.15s ease-in-out;
   border: none;
 }
 
 .notification-action {
-  color: #ebdbb2;
+  color: #cad3f5;
   border: 2px solid @noti-border-color;
   border-top: none;
-  border-radius: 0px;
+  border-radius: 10px;
   background: @noti-bg-darker;
 }
 
 .notification-default-action:hover,
 .notification-action:hover {
-  color: #ebdbb2;
+  color: #cad3f5;
   background: @noti-bg-darker;
 }
 
 .summary {
   padding-top: 7px;
   font-size: 13px;
-  color: #ebdbb2;
+  color: #cad3f5;
 }
 
 .time {
   font-size: 11px;
-  color: #fabd2f;
+  color: #f4dbd6;
   margin-right: 24px;
 }
 
 .body {
   font-size: 12px;
-  color: #ebdbb2;
+  color: #cad3f5;
 }
 
 .control-center {
   background: @cc-bg;
   border: 2px solid @noti-border-color;
-  border-radius: 0px;
+  border-radius: 10px;
 }
 
 .control-center-list {
@@ -111,7 +113,7 @@
   padding: 5px 10px;
   margin: 10px 10px 5px 10px;
   font-size: 1.5rem;
-  border-radius: 0px;
+  border-radius: 10px;
 }
 
 .widget-title > button {
@@ -120,11 +122,11 @@
   text-shadow: none;
   background: @noti-bg;
   box-shadow: none;
-  border-radius: 0px;
+  border-radius: 10px;
 }
 
 .widget-title > button:hover {
-  background: #fabd2f;
+  background: #f4dbd6;
   color: @cc-bg;
 }
 
@@ -135,13 +137,13 @@ trough {
 
 trough highlight {
   padding: 2px;
-  background: #fabd2f;
+  background: #f4dbd6;
   border: none;
 }
 
 trough slider {
-  border-color: #fabd2f;
-  background: rgb(60, 56, 54);
+  border-color: #f4dbd6;
+  background: rgb(36, 39, 58);
   box-shadow: none;
 }
 
@@ -149,19 +151,19 @@ trough slider {
   background: alpha(@noti-bg-darker, 0.6);
   padding: 5px 10px;
   margin: 5px 10px 10px 10px;
-  border-radius: 0px;
+  border-radius: 10px;
   font-size: large;
-  color: #fbf1c7;
+  color: #f5e0dc;
 }
 
 .widget-dnd > switch {
   border-radius: 4px;
-  background: #665c54;
+  background: #494d64;
 }
 
 .widget-dnd > switch:checked {
-  background: #fabd2f;
-  border: 1px solid #fabd2f;
+  background: #f4dbd6;
+  border: 1px solid #f4dbd6;
 }
 
 .widget-dnd > switch slider {
@@ -188,11 +190,11 @@ trough slider {
   background: @noti-bg-darker;
   padding: 5px 10px 0px 0px;
   margin: 5px 10px 5px 10px;
-  border-radius: 0px;
+  border-radius: 10px;
 }
 
 .widget-mpris > box > button {
-  border-radius: 0px;
+  border-radius: 10px;
 }
 
 .widget-mpris-player {
@@ -213,21 +215,21 @@ trough slider {
   font-size: large;
   padding: 5px;
   margin: 5px 10px 10px 10px;
-  border-radius: 0px;
+  border-radius: 10px;
   background: @noti-bg-darker;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button {
   margin: 3px;
   background: @cc-bg;
-  border-radius: 0px;
+  border-radius: 10px;
   color: @text-color;
   text-shadow: none;
   box-shadow: none;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
-  background: #fabd2f;
+  background: #f4dbd6;
   color: @cc-bg;
 }
 

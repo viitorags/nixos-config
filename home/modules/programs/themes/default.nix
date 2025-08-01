@@ -10,10 +10,10 @@
   xdg.configFile = {
     "Kvantum/kvantum.kvconfig".text = ''
       [General]
-      theme=catppuccin-macchiato-mauve
+      theme=catppuccin-kvantum
     '';
 
-    "Kvantum/catppuccin-macchiato-mauve/".source = ./catppuccin-kvantum;
+    "Kvantum/catppuccin-kvantum/".source = ./catppuccin-kvantum;
 
   };
   dconf.settings = {
@@ -33,8 +33,8 @@
   gtk = {
     enable = true;
     iconTheme = {
-      name = "Gruvbox-Plus-Dark";
-      package = pkgs.gruvbox-plus-icons;
+      name = "Papirus-Dark";
+      package = pkgs.papirus-nord;
     };
     theme = {
       name = "Catppuccin-GTK-Dark";

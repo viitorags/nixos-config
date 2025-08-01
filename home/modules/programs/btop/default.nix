@@ -2,51 +2,75 @@
   programs.btop = {
     enable = true;
 
-    # themes = {
-    #   gruvbox-material = ''
-    #     theme[main_bg]="#32302f"
-    #     theme[main_fg]="#d4be98"
-    #     theme[title]="#d4be98"
-    #     theme[hi_fg]="#ea6962"
-    #     theme[selected_bg]="#d8a657"
-    #     theme[selected_fg]="#282828"
-    #     theme[inactive_fg]="#282828"
-    #     theme[graph_text]="#665c54"
-    #     theme[proc_misc]="#a9b665"
-    #     theme[cpu_box]="#7c6f64"
-    #     theme[mem_box]="#7c6f64"
-    #     theme[net_box]="#7c6f64"
-    #     theme[proc_box]="#7c6f64"
-    #     theme[div_line]="#7c6f64"
-    #     theme[temp_start]="#7daea3"
-    #     theme[temp_mid]="#e78a4e"
-    #     theme[temp_end]="#ea6962"
-    #     theme[cpu_start]="#a9b665"
-    #     theme[cpu_mid]="#d8a657"
-    #     theme[cpu_end]="#ea6962"
-    #     theme[free_start]="#89b482"
-    #     theme[free_mid]=""
-    #     theme[free_end]=""
-    #     theme[cached_start]="#7daea3"
-    #     theme[cached_mid]=""
-    #     theme[cached_end]=""
-    #     theme[available_start]="#d8a657"
-    #     theme[available_mid]=""
-    #     theme[available_end]=""
-    #     theme[used_start]="#ea6962"
-    #     theme[used_mid]=""
-    #     theme[used_end]=""
-    #     theme[download_start]="#e78a4e"
-    #     theme[download_mid]=""
-    #     theme[download_end]=""
-    #     theme[upload_start]="#d3869b"
-    #     theme[upload_mid]=""
-    #     theme[upload_end]=""
-    #   '';
-    # };
+    themes = {
+      catppuccin-macchiato = ''
+        theme[main_bg]="#24273a"
+
+        theme[main_fg]="#cad3f5"
+
+        theme[title]="#cad3f5"
+
+        theme[hi_fg]="#8aadf4"
+
+        theme[selected_bg]="#494d64"
+
+        theme[selected_fg]="#8aadf4"
+
+        theme[inactive_fg]="#8087a2"
+
+        theme[graph_text]="#f4dbd6"
+
+        theme[meter_bg]="#494d64"
+
+        theme[proc_misc]="#f4dbd6"
+
+        theme[cpu_box]="#c6a0f6" #Mauve
+        theme[mem_box]="#a6da95" #Green
+        theme[net_box]="#ee99a0" #Maroon
+        theme[proc_box]="#8aadf4" #Blue
+
+        theme[div_line]="#6e738d"
+
+        theme[temp_start]="#a6da95"
+        theme[temp_mid]="#eed49f"
+        theme[temp_end]="#ed8796"
+
+        theme[cpu_start]="#8bd5ca"
+        theme[cpu_mid]="#7dc4e4"
+        theme[cpu_end]="#b7bdf8"
+
+        theme[free_start]="#c6a0f6"
+        theme[free_mid]="#b7bdf8"
+        theme[free_end]="#8aadf4"
+
+        theme[cached_start]="#7dc4e4"
+        theme[cached_mid]="#8aadf4"
+        theme[cached_end]="#b7bdf8"
+
+        theme[available_start]="#f5a97f"
+        theme[available_mid]="#ee99a0"
+        theme[available_end]="#ed8796"
+
+        theme[used_start]="#a6da95"
+        theme[used_mid]="#8bd5ca"
+        theme[used_end]="#91d7e3"
+
+        theme[download_start]="#f5a97f"
+        theme[download_mid]="#ee99a0"
+        theme[download_end]="#ed8796"
+
+        theme[upload_start]="#a6da95"
+        theme[upload_mid]="#8bd5ca"
+        theme[upload_end]="#91d7e3"
+
+        theme[process_start]="#7dc4e4"
+        theme[process_mid]="#b7bdf8"
+        theme[process_end]="#c6a0f6"
+      '';
+    };
 
     settings = {
-      color_theme = "gruvbox-material";
+      color_theme = "catppuccin-macchiato";
 
       truecolor = true;
 

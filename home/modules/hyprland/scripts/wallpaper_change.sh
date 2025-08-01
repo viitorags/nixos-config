@@ -7,16 +7,14 @@ if [ ! -d "$cacheDir" ]; then
     mkdir -p "$cacheDir"
 fi
 
-{
-    for imagen in "$wall_dir"/*.{jpg,jpeg,png,webp,gif}; do
-        if [ -f "$imagen" ]; then
-            nombre_archivo=$(basename "$imagen")
-            if [ ! -f "$cacheDir/$nombre_archivo" ]; then
-                magick "$imagen" -strip -thumbnail 500x500^ -gravity center -extent 500x500 "$cacheDir/$nombre_archivo"
-            fi
+for imagen in "$wall_dir"/*.{jpg,jpeg,png,webp,gif}; do
+    if [ -f "$imagen" ]; then
+        nombre_archivo=$(basename "$imagen")
+        if [ ! -f "$cacheDir/$nombre_archivo" ]; then
+            magick "$imagen" -strip -thumbnail 500x500^ -gravity center -extent 500x500 "$cacheDir/$nombre_archivo"
         fi
-    done
-} &
+    fi
+done
 
 rofi_command="rofi -dmenu -theme $HOME/.config/rofi/wall_select.rasi"
 

@@ -230,7 +230,7 @@
 
           border_size = 2
 
-          col.active_border = rgba(d79921ff)
+          col.active_border = rgba(f5a97fff)
           col.inactive_border = rgba(414868aa)
 
           resize_on_border = true
@@ -241,8 +241,8 @@
       }
 
       decoration {
-        rounding = 0
-        rounding_power = 0
+        rounding = 10
+        rounding_power = 10
 
         active_opacity = 0.8
         inactive_opacity = 0.7
