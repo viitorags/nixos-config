@@ -21,6 +21,8 @@
     ripgrep
     go
     php
+    php.packages.composer
+    phpPackages.php-codesniffer
 
     # Formatters
     nixfmt-rfc-style
