@@ -1,15 +1,16 @@
-@define-color bg #24273a;
+@define-color bg #1f1f28;
 
 * {
   border: none;
-  font-family: "Sarasa Gothic CL";
+  font-family: "JetBrainsMono Nerd Font Propo";
   font-size: 16px;
   font-weight: bold;
   background: none;
 }
 
 window#waybar {
-  color: #cad3f5;
+  color: #dcd7ba;
+  background: alpha(@bg, 0.7);
 }
 
 .modules-left,
@@ -17,83 +18,81 @@ window#waybar {
 .modules-center {
   border-radius: 10px;
   background: alpha(@bg, 0.7);
-  padding: 12px 0;
-  border: solid 2px #f5a97f;
+  padding: 2px 5px;
+  margin: 2px 5px;
+  border: solid 2px #7e9cd8; /* Blue */
 }
 
 tooltip {
-  color: #8aadf4;
-  background-color: #24273a;
+  color: #7e9cd8;
+  background-color: #1f1f28;
   text-shadow: none;
 }
 
 tooltip * {
-  color: #8aadf4;
+  color: #7e9cd8;
   text-shadow: none;
 }
 
 #custom-sep {
-  color: #a5adcb;
+  color: #727169; /* Grey */
   margin: 4px 0;
 }
 
 #workspaces {
   border-radius: 4px;
-  margin-right: 5px;
 }
 
 #workspaces button {
-  color: #f5a97f;
+  color: #ffa066; /* Orange */
   background: none;
-  padding: 0;
+  padding: 1;
 }
 
 #workspaces button:hover {
-  color: #f4dbd6;
+  color: #dcd7ba; /* FG */
 }
 
 #workspaces button.active {
-  color: #a6da95;
+  color: #76946a; /* Green */
 }
 
 #workspaces button.empty {
-  color: #6e738d;
+  color: #727169; /* Grey */
 }
 
 #workspaces button.visible {
-  color: #8bd5ca;
+  color: #6a9589; /* Cyan */
 }
 
 #workspaces button.urgent {
-  color: #ed8796;
+  color: #c34043; /* Red */
 }
 
 #memory {
-  color: #f5a97f;
+  color: #ffa066; /* Orange */
   padding-left: 5px;
   padding-right: 7px;
 }
 
 #clock {
   font-weight: 600;
-  color: #a6da95;
+  color: #76946a; /* Green */
 }
 
 #pulseaudio {
-  color: #8aadf4;
+  color: #7e9cd8; /* Blue */
 }
 
 #pulseaudio.muted {
-  color: #ed8796;
+  color: #c34043; /* Red */
 }
 
 #network {
-  color: #8bd5ca;
+  color: #6a9589; /* Cyan */
 }
 
 #custom-notification {
-  color: #c6a0f6;
-  padding-top: 5px;
-  padding-left: 5px;
+  color: #957fb8; /* Magenta */
   padding-right: 7px;
 }

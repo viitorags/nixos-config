@@ -25,6 +25,6 @@
       ];
 
       theme = spicePkgs.themes.comfy;
-      colorScheme = "catppuccin-macchiato";
+      colorScheme = "Kanagawa";
     };
 }

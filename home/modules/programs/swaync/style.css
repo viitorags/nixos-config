@@ -1,15 +1,15 @@
-@define-color cc-bg rgba(36, 39, 58, 0.7);
-@define-color noti-bg rgba(30, 32, 48, 0.7);
-@define-color noti-bg-darker rgba(24, 25, 38, 0.7);
-@define-color noti-border-color #f5a97f;
-@define-color noti-bg-hover rgb(30, 32, 48);
-@define-color noti-bg-focus rgba(24, 25, 38, 0.7);
-@define-color text-color #cad3f5;
-@define-color text-color-disabled #a5adcb;
-@define-color bg-selected rgba(198, 160, 246, 0.7);
+@define-color cc-bg rgba(31, 31, 40, 0.7);
+@define-color noti-bg rgba(24, 24, 32, 0.7);
+@define-color noti-bg-darker rgba(22, 22, 29, 0.7);
+@define-color noti-border-color #7e9cd8; /* Blue */
+@define-color noti-bg-hover rgb(24, 24, 32);
+@define-color noti-bg-focus rgba(22, 22, 29, 0.7);
+@define-color text-color #dcd7ba; /* FG */
+@define-color text-color-disabled #727169; /* Grey */
+@define-color bg-selected rgba(149, 127, 184, 0.7); /* Magenta */
 
 * {
-  font-family: Fantasque Sans Mono Regular;
+  font-family: "JetBrainsMono Nerd Font";
   font-weight: bold;
   font-size: 14px;
 }
@@ -42,7 +42,7 @@
 }
 
 .close-button {
-  background: #f4dbd6;
+  background: #c0a36e; /* Yellow */
   color: @cc-bg;
   text-shadow: none;
   padding: 0;
@@ -53,13 +53,13 @@
 
 .close-button:hover {
   box-shadow: none;
-  background: #f5a97f;
+  background: #ffa066; /* Orange */
   transition: all 0.15s ease-in-out;
   border: none;
 }
 
 .notification-action {
-  color: #cad3f5;
+  color: @text-color;
   border: 2px solid @noti-border-color;
   border-top: none;
   border-radius: 10px;
@@ -68,25 +68,25 @@
 
 .notification-default-action:hover,
 .notification-action:hover {
-  color: #cad3f5;
+  color: @text-color;
   background: @noti-bg-darker;
 }
 
 .summary {
   padding-top: 7px;
   font-size: 13px;
-  color: #cad3f5;
+  color: @text-color;
 }
 
 .time {
   font-size: 11px;
-  color: #f4dbd6;
+  color: #ffa066; /* Orange */
   margin-right: 24px;
 }
 
 .body {
   font-size: 12px;
-  color: #cad3f5;
+  color: @text-color;
 }
 
 .control-center {
@@ -126,7 +126,7 @@
 }
 
 .widget-title > button:hover {
-  background: #f4dbd6;
+  background: #c0a36e; /* Yellow */
   color: @cc-bg;
 }
 
@@ -137,13 +137,13 @@ trough {
 
 trough highlight {
   padding: 2px;
-  background: #f4dbd6;
+  background: #c0a36e; /* Yellow */
   border: none;
 }
 
 trough slider {
-  border-color: #f4dbd6;
-  background: rgb(36, 39, 58);
+  border-color: #c0a36e;
+  background: rgb(31, 31, 40);
   box-shadow: none;
 }
 
@@ -153,7 +153,7 @@ trough slider {
   margin: 5px 10px 10px 10px;
   border-radius: 10px;
   font-size: large;
-  color: #f5e0dc;
+  color: #ffa066; /* Orange */
 }
 
 .widget-dnd > switch {
@@ -162,8 +162,8 @@ trough slider {
 }
 
 .widget-dnd > switch:checked {
-  background: #f4dbd6;
-  border: 1px solid #f4dbd6;
+  background: #c0a36e; /* Yellow */
+  border: 1px solid #c0a36e;
 }
 
 .widget-dnd > switch slider {
@@ -229,7 +229,7 @@ trough slider {
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
-  background: #f4dbd6;
+  background: #c0a36e; /* Yellow */
   color: @cc-bg;
 }
 

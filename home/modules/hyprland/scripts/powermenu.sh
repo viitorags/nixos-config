@@ -35,12 +35,12 @@ rofi_cmd() {
         -p "$USER@$host" \
         -mesg " Uptime: $uptime" \
         -theme ${dir}/${theme}.rasi \
-        -theme-str 'element {border: 2px solid;}'
+        -theme-str 'element {border: 2px solid; border-color: @active;}'
     # -theme-str "inputbar { background-image: url(\"$wallpaper_path\", width); }"
 }
 
 confirm_cmd() {
-    rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 350px; background-color: #282828;}' \
+    rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 350px; background-color: #282828; border: 2px solid; border-color: @active;}' \
         -theme-str 'mainbox {orientation: vertical; children: [ "message", "listview" ];}' \
         -theme-str 'listview {columns: 2; lines: 1;}' \
         -theme-str 'element-text {horizontal-align: 0.6;}' \

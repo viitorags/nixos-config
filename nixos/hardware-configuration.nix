@@ -25,12 +25,12 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/22e3c081-e4eb-4537-b066-ff897a8c5089";
+    device = "/dev/disk/by-label/nixos";
     fsType = "ext4";
   };
 
   swapDevices = [
-    { device = "/dev/disk/by-uuid/b4dbcf73-3d37-46cf-8817-fdc9000ce2de"; }
+    { device = "/dev/disk/by-label/swap"; }
   ];
 
   hardware.graphics = {

@@ -70,7 +70,6 @@
 
   # Fonts
   fonts.packages = with pkgs; [
-    sarasa-gothic
     font-awesome
     nerd-fonts.jetbrains-mono
   ];

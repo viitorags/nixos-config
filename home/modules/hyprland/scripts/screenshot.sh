@@ -17,6 +17,7 @@ option_6="󰓛  Stop Recording"
 rofi_cmd() {
     rofi -dmenu \
         -p "$USER@$host" \
+        -font "JetBrainsMono Nerd Font Propo 12" \
         -mesg "  $dir_screenshot" \
         -theme ${dir}/${theme}.rasi
 }

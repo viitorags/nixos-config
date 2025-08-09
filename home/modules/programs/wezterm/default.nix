@@ -9,21 +9,9 @@
       config.enable_wayland = true
       config.enable_tab_bar = false
       config.window_close_confirmation = "NeverPrompt"
-      config.font = wezterm.font("Sarasa Mono TC", { weight = "DemiBold", italic = false })
-      config.font_size = 12
-      config.font_rules = {
-        {
-          intensity = "Half",
-          italic = false,
-          font = wezterm.font("Sarasa Mono TC", { weight = "Bold", stretch = "Normal", style = "Normal" }),
-        },
-        {
-          intensity = "Half",
-          italic = true,
-          font = wezterm.font("Sarasa Mono TC", { weight = "Bold", stretch = "Normal", style = "Italic" }),
-        },
-      }
-      config.color_scheme = "Catppuccin Macchiato (Gogh)"
+      config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "DemiBold", italic = false })
+      config.font_size = 11
+      config.color_scheme = "Kanagawa (Gogh)"
       config.custom_block_glyphs = false
       config.mouse_wheel_scrolls_tabs = false
       config.warn_about_missing_glyphs = false

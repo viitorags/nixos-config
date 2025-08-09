@@ -22,7 +22,8 @@
     go
     php
     php.packages.composer
-    phpPackages.php-codesniffer
+    (callPackage ./php-cs-fixer.nix { })
+    laravel
 
     # Formatters
     nixfmt-rfc-style

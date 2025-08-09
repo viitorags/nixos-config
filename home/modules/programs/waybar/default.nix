@@ -5,11 +5,8 @@
     settings = [
       {
         "layer" = "top";
-        "position" = "left";
-        "width" = 35;
-        "margin-top" = 5;
-        "margin-bottom" = 5;
-        "margin-left" = 2;
+        "position" = "bottom";
+        "height" = 35;
         "gtk-layer-shell" = true;
         "modules-left" = [
           "clock"
@@ -47,13 +44,14 @@
         };
 
         "custom/sep" = {
+          "rotate" = 90;
           #"format" = "──";
           "format" = "";
         };
 
         "clock" = {
           "tooltip" = true;
-          "format" = "{:%H\n%M}";
+          "format" = "{:%H:%M}";
           "tooltip-format" = "{:%Y-%m-%d}";
         };
 
@@ -61,14 +59,14 @@
           "tooltip" = false;
           "format" = "{icon}";
           "format-icons" = {
-            "notification" = "&#x2005;<span foreground='red'><sup>•</sup></span>";
+            "notification" = "<span foreground='red'><sup></sup></span>";
             "none" = "";
-            "dnd-notification" = "&#x2005;<span foreground='red'><sup>•</sup></span>";
-            "dnd-none" = "&#x2005;";
-            "inhibited-notification" = "&#x2005;<span foreground='red'><sup>•</sup></span>";
+            "dnd-notification" = "<span foreground='red'><sup></sup></span>";
+            "dnd-none" = "";
+            "inhibited-notification" = "<span foreground='red'><sup></sup></span>";
             "inhibited-none" = "";
-            "dnd-inhibited-notification" = "&#x2005;<span foreground='red'><sup>•</sup></span>";
-            "dnd-inhibited-none" = "&#x2005;";
+            "dnd-inhibited-notification" = "<span foreground='red'><sup></sup></span>";
+            "dnd-inhibited-none" = "";
           };
           "return-type" = "json";
           "exec-if" = "which swaync-client";
@@ -79,17 +77,16 @@
         };
 
         "pulseaudio" = {
-          "rotate" = 90;
           "on-click" = "pactl set-sink-mute @DEFAULT_SINK@ toggle";
           "on-click-right" = "pavucontrol";
           "tooltip" = false;
           "scroll-step" = 1;
-          "format" = "{icon}&#x2005;  {volume}%";
+          "format" = "{icon}&#x2005;{volume}%";
           "format-source" = "";
           "format-source-muted" = "";
-          "format-bluetooth" = "{icon}&#x2005;{volume}%";
-          "format-bluetooth-muted" = " &#x2005;&#x2005;{volume}%";
-          "format-muted" = "<span> &#x2005;MUTE</span>";
+          "format-bluetooth" = "{icon}{volume}%";
+          "format-bluetooth-muted" = "{volume}%";
+          "format-muted" = "<span> MUTE</span>";
           "format-icons" = {
             "headphone" = "";
             "hands-free" = "";
@@ -106,9 +103,9 @@
         "network" = {
           "interface" = "wlo1";
           "format" = "{ifname}";
-          "format-wifi" = "&#x2005;<span> </span>";
+          "format-wifi" = "<span> </span>";
           "format-ethernet" = "{ipaddr}/{cidr} ";
-          "format-disconnected" = "&#x2005;<span>󰖪 </span>";
+          "format-disconnected" = "<span>󰖪</span>";
           "tooltip" = false;
           "on-click" = "wezterm start -- nmtui";
         };
@@ -160,8 +157,7 @@
         };
 
         "memory" = {
-          "rotate" = 90;
-          "format" = "󰋊 {}%";
+          "format" = "󰋊&#x2005;{}%";
           "on-click" = "wezterm start -- btop";
         };
 

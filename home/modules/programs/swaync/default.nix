@@ -2,7 +2,7 @@
   services.swaync = {
     enable = true;
     settings = {
-      positionX = "left";
+      positionX = "right";
       positionY = "top";
       control-center-radius = 1;
       fit-to-screen = true;

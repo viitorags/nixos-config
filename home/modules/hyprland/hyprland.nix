@@ -230,7 +230,7 @@
 
           border_size = 2
 
-          col.active_border = rgba(f5a97fff)
+          col.active_border = rgba(8aadf4ff)
           col.inactive_border = rgba(414868aa)
 
           resize_on_border = true

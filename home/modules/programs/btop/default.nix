@@ -3,74 +3,72 @@
     enable = true;
 
     themes = {
-      catppuccin-macchiato = ''
-        theme[main_bg]="#24273a"
+      kanagawa = ''
+        theme[main_bg]="#1f1f28"         # bg
+        theme[main_fg]="#dcd7ba"         # fg
 
-        theme[main_fg]="#cad3f5"
+        theme[title]="#dcd7ba"           # fg
 
-        theme[title]="#cad3f5"
+        theme[hi_fg]="#7e9cd8"           # blue
 
-        theme[hi_fg]="#8aadf4"
+        theme[selected_bg]="#2a2a37"     # bg2
+        theme[selected_fg]="#7e9cd8"     # blue
 
-        theme[selected_bg]="#494d64"
+        theme[inactive_fg]="#727169"     # grey
 
-        theme[selected_fg]="#8aadf4"
+        theme[graph_text]="#c0a36e"      # yellow
 
-        theme[inactive_fg]="#8087a2"
+        theme[meter_bg]="#2a2a37"        # bg2
 
-        theme[graph_text]="#f4dbd6"
+        theme[proc_misc]="#c0a36e"       # yellow
 
-        theme[meter_bg]="#494d64"
+        theme[cpu_box]="#957fb8"         # magenta
+        theme[mem_box]="#76946a"         # green
+        theme[net_box]="#c34043"         # red
+        theme[proc_box]="#7e9cd8"        # blue
 
-        theme[proc_misc]="#f4dbd6"
+        theme[div_line]="#54546d"        # border grey
 
-        theme[cpu_box]="#c6a0f6" #Mauve
-        theme[mem_box]="#a6da95" #Green
-        theme[net_box]="#ee99a0" #Maroon
-        theme[proc_box]="#8aadf4" #Blue
+        theme[temp_start]="#76946a"      # green
+        theme[temp_mid]="#c0a36e"        # yellow
+        theme[temp_end]="#c34043"        # red
 
-        theme[div_line]="#6e738d"
+        theme[cpu_start]="#6a9589"       # cyan
+        theme[cpu_mid]="#7e9cd8"         # blue
+        theme[cpu_end]="#957fb8"         # magenta
 
-        theme[temp_start]="#a6da95"
-        theme[temp_mid]="#eed49f"
-        theme[temp_end]="#ed8796"
+        theme[free_start]="#957fb8"      # magenta
+        theme[free_mid]="#a3a6c1"        # soft lavender-grey
+        theme[free_end]="#7e9cd8"        # blue
 
-        theme[cpu_start]="#8bd5ca"
-        theme[cpu_mid]="#7dc4e4"
-        theme[cpu_end]="#b7bdf8"
+        theme[cached_start]="#7e9cd8"    # blue
+        theme[cached_mid]="#9cabca"      # light blue-grey
+        theme[cached_end]="#a3a6c1"      # soft lavender-grey
 
-        theme[free_start]="#c6a0f6"
-        theme[free_mid]="#b7bdf8"
-        theme[free_end]="#8aadf4"
+        theme[available_start]="#ffa066" # orange
+        theme[available_mid]="#c0a36e"   # yellow
+        theme[available_end]="#c34043"   # red
 
-        theme[cached_start]="#7dc4e4"
-        theme[cached_mid]="#8aadf4"
-        theme[cached_end]="#b7bdf8"
+        theme[used_start]="#76946a"      # green
+        theme[used_mid]="#6a9589"        # cyan
+        theme[used_end]="#7e9cd8"        # blue
 
-        theme[available_start]="#f5a97f"
-        theme[available_mid]="#ee99a0"
-        theme[available_end]="#ed8796"
+        theme[download_start]="#ffa066"  # orange
+        theme[download_mid]="#c0a36e"    # yellow
+        theme[download_end]="#c34043"    # red
 
-        theme[used_start]="#a6da95"
-        theme[used_mid]="#8bd5ca"
-        theme[used_end]="#91d7e3"
+        theme[upload_start]="#76946a"    # green
+        theme[upload_mid]="#6a9589"      # cyan
+        theme[upload_end]="#7e9cd8"      # blue
 
-        theme[download_start]="#f5a97f"
-        theme[download_mid]="#ee99a0"
-        theme[download_end]="#ed8796"
-
-        theme[upload_start]="#a6da95"
-        theme[upload_mid]="#8bd5ca"
-        theme[upload_end]="#91d7e3"
-
-        theme[process_start]="#7dc4e4"
-        theme[process_mid]="#b7bdf8"
-        theme[process_end]="#c6a0f6"
+        theme[process_start]="#7e9cd8"   # blue
+        theme[process_mid]="#a3a6c1"     # soft lavender-grey
+        theme[process_end]="#957fb8"     # magenta
       '';
     };
 
     settings = {
-      color_theme = "catppuccin-macchiato";
+      color_theme = "kanagawa";
 
       truecolor = true;
 
