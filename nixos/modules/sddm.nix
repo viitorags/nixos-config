@@ -1,9 +1,9 @@
 {
-  unstable,
+  pkgs,
   ...
 }:
 let
-  sddm-astronaut = unstable.sddm-astronaut.override {
+  sddm-astronaut = pkgs.sddm-astronaut.override {
     embeddedTheme = "hyprland_kath";
   };
 in
@@ -12,12 +12,12 @@ in
     displayManager.sddm = {
       enable = true;
       wayland.enable = true;
-      package = unstable.kdePackages.sddm;
-      theme = "sddm-astronaut-theme"; # Name of theme package
-      extraPackages = [ sddm-astronaut ]; # Should be here
+      package = pkgs.kdePackages.sddm;
+      theme = "sddm-astronaut-theme";
+      extraPackages = [ sddm-astronaut ];
     };
     displayManager.defaultSession = "hyprland";
   };
 
-  environment.systemPackages = [ sddm-astronaut ]; # And here, also adds a lot of bloat
+  environment.systemPackages = [ sddm-astronaut ];
 }
