@@ -1,6 +1,5 @@
 { pkgs, ... }:
 {
-
   qt = {
     enable = true;
     platformTheme.name = "qt5ct";
@@ -37,11 +36,11 @@
       package = pkgs.papirus-nord;
     };
     theme = {
-      name = "Kanagawa-BL-LB";
+      name = "Kanagawa-B-LB";
       package = pkgs.kanagawa-gtk-theme;
     };
     font = {
-      name = "JetBrainsMono Nerd Font";
+      name = "Sarasa Gothic CL SemiBold";
     };
   };
 }

@@ -22,13 +22,10 @@
       };
 
     initContent = ''
+      pokemon-colorscripts -n pikachu -s --no-title
+      eval "$(starship init zsh)"
       export PATH="$HOME/.cache/npm/global/bin:$PATH"
       export PATH="$HOME/.nix-profile/bin:$PATH"
     '';
-
-    oh-my-zsh = {
-      enable = true;
-      theme = "gnzh";
-    };
   };
 }

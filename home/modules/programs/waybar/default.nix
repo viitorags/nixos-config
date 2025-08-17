@@ -20,6 +20,7 @@
           "pulseaudio"
           "custom/sep"
           "network"
+          "custom/sep"
           "custom/notification"
         ];
 
@@ -84,9 +85,9 @@
           "format" = "{icon}&#x2005;{volume}%";
           "format-source" = "";
           "format-source-muted" = "";
-          "format-bluetooth" = "{icon}{volume}%";
-          "format-bluetooth-muted" = "{volume}%";
-          "format-muted" = "<span> MUTE</span>";
+          "format-bluetooth" = "{icon}&#x2005;{volume}%";
+          "format-bluetooth-muted" = "&#x2005;{volume}%";
+          "format-muted" = "<span>&#x2005;MUTE</span>";
           "format-icons" = {
             "headphone" = "";
             "hands-free" = "";
@@ -103,7 +104,7 @@
         "network" = {
           "interface" = "wlo1";
           "format" = "{ifname}";
-          "format-wifi" = "<span> </span>";
+          "format-wifi" = "<span></span>";
           "format-ethernet" = "{ipaddr}/{cidr} ";
           "format-disconnected" = "<span>󰖪</span>";
           "tooltip" = false;

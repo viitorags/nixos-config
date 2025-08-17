@@ -1,6 +1,6 @@
 {
   pkgs,
-  quickshell,
+  unstable,
   ...
 }:
 {
@@ -17,15 +17,19 @@
     packages = with pkgs; [
       krita
       prismlauncher
+      xfce.thunar
+      xfce.thunar-archive-plugin
+      xfce.thunar-volman
+      gvfs
+      xfce.tumbler
       swww
       zathura
       kitty.terminfo
       openshot-qt
       bc
       ibus
-      gnome.gvfs
-      quickshell.packages.${pkgs.system}.default
       imagemagick
+      unstable.pokemon-colorscripts
     ];
 
     pointerCursor = {
@@ -40,6 +44,13 @@
       QT_QUICK_CONTROLS_STYLE = "Kvantum";
       GTK_IM_MODULE = "ibus";
       TERMINAL = "wezterm";
+    };
+  };
+
+  xdg = {
+    userDirs = {
+      enable = true;
+      createDirectories = true;
     };
   };
 }

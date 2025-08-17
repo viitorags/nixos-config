@@ -12,7 +12,7 @@ configuration {
 @theme "~/.config/rofi/colors/colors.rasi"
 
 * {
-    font:                      "JetBrainsMono Nerd Font Propo 15";
+    font:                      "Sarasa Gothic CL 12";
     main-bg:                   @background;
     main-fg:                   @foreground;
     select-bg:                 @selected;

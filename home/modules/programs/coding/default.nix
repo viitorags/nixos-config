@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     # Coding Utils
-    vscode-fhs
+    vscodium-fhs
     unstable.dbeaver-bin
     neovim
     gh-notify

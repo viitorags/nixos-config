@@ -12,7 +12,7 @@
       monitor = ",preferred,auto,auto";
 
       "$terminal" = "wezterm start";
-      "$fileManager" = "wezterm start -- yazi";
+      "$fileManager" = "thunar";
       "$menu" = "bash -c ~/nixos-config/home/modules/hyprland/scripts/launcher.sh";
       "$browser" = "brave";
       "$editor" = "wezterm -e zsh -ic nvim";

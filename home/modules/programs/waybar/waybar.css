@@ -2,7 +2,7 @@
 
 * {
   border: none;
-  font-family: "JetBrainsMono Nerd Font Propo";
+  font-family: "Sarasa Gothic CL", "JetBrainsMono Nerd Font Propo";
   font-size: 16px;
   font-weight: bold;
   background: none;
@@ -36,7 +36,6 @@ tooltip * {
 
 #custom-sep {
   color: #727169; /* Grey */
-  margin: 4px 0;
 }
 
 #workspaces {
@@ -71,8 +70,6 @@ tooltip * {
 
 #memory {
   color: #ffa066; /* Orange */
-  padding-left: 5px;
-  padding-right: 7px;
 }
 
 #clock {
@@ -94,5 +91,4 @@ tooltip * {
 
 #custom-notification {
   color: #957fb8; /* Magenta */
-  padding-right: 7px;
 }

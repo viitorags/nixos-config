@@ -9,7 +9,7 @@
 @define-color bg-selected rgba(149, 127, 184, 0.7); /* Magenta */
 
 * {
-  font-family: "JetBrainsMono Nerd Font";
+  font-family: "Sarasa Gothic CL", "JetBrainsMono Nerd Font Propo";
   font-weight: bold;
   font-size: 14px;
 }
