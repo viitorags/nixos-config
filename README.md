@@ -3,11 +3,6 @@
 
 <p>My NixOs setup using <a href="">Hyprland</a></p>
 
-<br>
-
-![GitHub Repo stars](https://img.shields.io/github/stars/viitorags/nixos-config?style=for-the-badge&color=8aadf4)
-![GitHub lastcommit](https://img.shields.io/github/last-commit/viitorags/nixos-config?style=for-the-badge&color=f5a97f)
-![GitHub repo size](https://img.shields.io/github/repo-size/viitorags/nixos-config?style=for-the-badge&color=a6da95)
 </div>
 
 ## Content
@@ -28,10 +23,10 @@
 
 <table>
     <tr>
-        <td><img src="./.previews/1754010227_grim.png" width="1000" /></td>
+        <td><img src="./.previews/1755368419_grim.png" width="1000" /></td>
     </tr>
     <tr>
-        <td><img src="./.previews/1754010244_grim.png" width="1000" /></td>
+        <td><img src="./.previews/1754670551_grim.png" width="1000" /></td>
     </tr>
 </table>
 
@@ -44,7 +39,7 @@
 |$mainMod + Shift + Return | Opens a floating terminal with custom position and size |
 |$mainMod + Q | Closes the active window |
 |$mainMod + Shift + M | Exits Hyprland |
-|$mainMod + E | Opens the file manager (Yazi) |
+|$mainMod + E | Opens the file manager (Thunar) |
 |$mainMod + T | Toggles the window between floating and tiled |
 |$mainMod + R | Toggles fullscreen |
 |$mainMod + A | Opens the launcher/menu (Rofi) |
@@ -68,7 +63,7 @@
 - [Rofi](https://github.com/davatorium/rofi)
 - [Wezterm](https://github.com/wezterm/wezterm)
 - [Zsh](https://www.zsh.org/) + [Oh My Zsh](https://ohmyz.sh/)
-- [Yazi](https://github.com/sxyazi/yazi)
+- [Thunar](https://gitlab.xfce.org/xfce/thunar)
 - [Zathura](https://pwmt.org/projects/zathura/)
 - [Swaync](https://github.com/ErikReider/SwayNotificationCenter)
 - [Sddm](https://github.com/sddm/sddm)
