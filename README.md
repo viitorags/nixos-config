@@ -39,7 +39,7 @@
 |$mainMod + Shift + Return | Opens a floating terminal with custom position and size |
 |$mainMod + Q | Closes the active window |
 |$mainMod + Shift + M | Exits Hyprland |
-|$mainMod + E | Opens the file manager (Thunar) |
+|$mainMod + E | Opens the file manager (Yazi) |
 |$mainMod + T | Toggles the window between floating and tiled |
 |$mainMod + R | Toggles fullscreen |
 |$mainMod + A | Opens the launcher/menu (Rofi) |
@@ -63,7 +63,7 @@
 - [Rofi](https://github.com/davatorium/rofi)
 - [Wezterm](https://github.com/wezterm/wezterm)
 - [Zsh](https://www.zsh.org/) + [Oh My Zsh](https://ohmyz.sh/)
-- [Thunar](https://gitlab.xfce.org/xfce/thunar)
+- [Yazi](https://github.com/sxyazi/yazi)
 - [Zathura](https://pwmt.org/projects/zathura/)
 - [Swaync](https://github.com/ErikReider/SwayNotificationCenter)
 - [Sddm](https://github.com/sddm/sddm)
