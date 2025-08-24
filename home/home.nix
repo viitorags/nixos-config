@@ -18,9 +18,7 @@
       krita
       prismlauncher
       xfce.thunar
-      xfce.thunar-archive-plugin
-      xfce.thunar-volman
-      gvfs
+      gnome.gvfs
       xfce.tumbler
       swww
       zathura

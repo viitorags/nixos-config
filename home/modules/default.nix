@@ -4,9 +4,9 @@
     ./programs/fastfetch
     ./programs/wezterm
     ./programs/swaync
+    ./programs/yazi
     ./programs/btop
     ./programs/zsh
-    ./programs/starship
     ./programs/feh
     ./programs/cava
     ./programs/zathura

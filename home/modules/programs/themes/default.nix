@@ -36,7 +36,7 @@
       package = pkgs.papirus-nord;
     };
     theme = {
-      name = "Kanagawa-B-LB";
+      name = "Kanagawa-BL-LB";
       package = pkgs.kanagawa-gtk-theme;
     };
     font = {
