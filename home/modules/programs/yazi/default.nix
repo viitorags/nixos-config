@@ -52,6 +52,11 @@
           on = "<C-n>";
           run = ''shell 'ripdrag "$@" -x 2>/dev/null &' --confirm'';
         }
+        {
+          on = "<C-s>";
+          run = "plugin kdeconnect-send";
+          desc = "Send selected files via KDE Connect";
+        }
       ];
     };
 

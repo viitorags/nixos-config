@@ -16,7 +16,6 @@ in
       theme = "sddm-astronaut-theme";
       extraPackages = [ sddm-astronaut ];
     };
-    displayManager.defaultSession = "hyprland";
   };
 
   environment.systemPackages = [ sddm-astronaut ];

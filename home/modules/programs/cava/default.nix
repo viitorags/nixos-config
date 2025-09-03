@@ -35,19 +35,19 @@
       output.frame_delimiter = 10;
 
       color = {
-        background = "'#1f1f28'"; # bg
-        foreground = "'#957fb8'"; # magenta
+        background = "'#1e1e2e'";
+        foreground = "'#cba6f7'";
 
         gradient = 1;
         gradient_count = 8;
-        gradient_color_1 = "'#6a9589'"; # cyan
-        gradient_color_2 = "'#7e9cd8'"; # blue
-        gradient_color_3 = "'#9cabca'"; # light blue-grey
-        gradient_color_4 = "'#a3a6c1'"; # soft lavender-grey
-        gradient_color_5 = "'#957fb8'"; # magenta
-        gradient_color_6 = "'#a96ca5'"; # pinkish magenta
-        gradient_color_7 = "'#c34043'"; # red
-        gradient_color_8 = "'#ffa066'"; # orange
+        gradient_color_1 = "'#94e2d5'";
+        gradient_color_2 = "'#89dceb'";
+        gradient_color_3 = "'#74c7ec'";
+        gradient_color_4 = "'#89b4fa'";
+        gradient_color_5 = "'#cba6f7'";
+        gradient_color_6 = "'#f5c2e7'";
+        gradient_color_7 = "'#eba0ac'";
+        gradient_color_8 = "'#f38ba8'";
       };
 
       smoothing.integral = 70;

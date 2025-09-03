@@ -38,6 +38,7 @@
     nodePackages.typescript-language-server
     nodePackages.eslint_d
     nodePackages.dockerfile-language-server-nodejs
+    vue-language-server
     pyright
     emmet-ls
     bash-language-server

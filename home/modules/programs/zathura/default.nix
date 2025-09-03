@@ -21,41 +21,43 @@
       recolor-keephue = true;
       render-loading = true;
 
-      notification-error-bg = "rgba(31,31,40,1)"; # bg
-      notification-error-fg = "rgba(195,64,67,1)"; # red
-      notification-warning-bg = "rgba(31,31,40,1)"; # bg
-      notification-warning-fg = "rgba(192,163,110,1)"; # yellow
-      notification-bg = "rgba(31,31,40,1)"; # bg
-      notification-fg = "rgba(118,148,106,1)"; # green
+      default-fg = "rgba(205,214,244,1)";
+      default-bg = "rgba(30,30,46,1)";
 
-      completion-bg = "rgba(50,53,63,1)"; # bg2
-      completion-fg = "rgba(220,215,186,1)"; # fg
-      completion-group-bg = "rgba(39,40,51,1)"; # bg-alt
-      completion-group-fg = "rgba(114,113,105,1)"; # grey
-      completion-highlight-bg = "rgba(126,156,216,1)"; # blue
-      completion-highlight-fg = "rgba(50,53,63,1)"; # bg2
+      completion-bg = "rgba(49,50,68,1)";
+      completion-fg = "rgba(205,214,244,1)";
+      completion-highlight-bg = "rgba(87,82,104,1)";
+      completion-highlight-fg = "rgba(205,214,244,1)";
+      completion-group-bg = "rgba(49,50,68,1)";
+      completion-group-fg = "rgba(137,180,250,1)";
 
-      index-bg = "rgba(50,53,63,1)"; # bg2
-      index-fg = "rgba(220,215,186,1)"; # fg
-      index-active-bg = "rgba(126,156,216,1)"; # blue
-      index-active-fg = "rgba(50,53,63,1)"; # bg2
+      statusbar-fg = "rgba(205,214,244,1)";
+      statusbar-bg = "rgba(49,50,68,1)";
 
-      inputbar-bg = "rgba(31,31,40,1)"; # bg
-      inputbar-fg = "rgba(220,215,186,1)"; # fg
+      notification-bg = "rgba(49,50,68,1)";
+      notification-fg = "rgba(205,214,244,1)";
+      notification-error-bg = "rgba(49,50,68,1)";
+      notification-error-fg = "rgba(243,139,168,1)";
+      notification-warning-bg = "rgba(49,50,68,1)";
+      notification-warning-fg = "rgba(250,227,176,1)";
 
-      statusbar-bg = "rgba(50,53,63,1)"; # bg2
-      statusbar-fg = "rgba(220,215,186,1)"; # fg
+      inputbar-fg = "rgba(205,214,244,1)";
+      inputbar-bg = "rgba(49,50,68,1)";
 
-      highlight-color = "rgba(192,163,110,0.5)"; # yellow
-      highlight-active-color = "rgba(255,160,102,0.5)"; # orange
+      recolor-lightcolor = "rgba(30,30,46,1)";
+      recolor-darkcolor = "rgba(205,214,244,1)";
 
-      default-bg = "rgba(31,31,40,1)"; # bg
-      default-fg = "rgba(220,215,186,1)"; # fg
-      render-loading-bg = "rgba(31,31,40,1)"; # bg
-      render-loading-fg = "rgba(220,215,186,1)"; # fg
+      index-fg = "rgba(205,214,244,1)";
+      index-bg = "rgba(30,30,46,1)";
+      index-active-fg = "rgba(205,214,244,1)";
+      index-active-bg = "rgba(49,50,68,1)";
 
-      recolor-lightcolor = "rgba(31,31,40,1)"; # bg
-      recolor-darkcolor = "rgba(220,215,186,1)"; # fg
+      render-loading-bg = "rgba(30,30,46,1)";
+      render-loading-fg = "rgba(205,214,244,1)";
+
+      highlight-color = "rgba(87,82,104,0.5)";
+      highlight-fg = "rgba(245,194,231,0.5)";
+      highlight-active-color = "rgba(245,194,231,0.5)";
     };
   };
 }

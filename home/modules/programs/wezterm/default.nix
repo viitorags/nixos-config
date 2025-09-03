@@ -23,7 +23,7 @@
         },
       }
       config.font_size = 12
-      config.color_scheme = "Kanagawa (Gogh)"
+      config.color_scheme = "Catppuccin Mocha (Gogh)"
       config.custom_block_glyphs = false
       config.mouse_wheel_scrolls_tabs = false
       config.warn_about_missing_glyphs = false

@@ -11,6 +11,19 @@
 
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+    };
+
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -18,6 +31,9 @@
       nixpkgs,
       home-manager,
       nixpkgs-unstable,
+      quickshell,
+      noctalia,
+      spicetify-nix,
       ...
     }@inputs:
     let
@@ -47,10 +63,14 @@
         };
         modules = [
           ./home/home.nix
+          spicetify-nix.homeManagerModules.default
         ];
         extraSpecialArgs = {
           inherit inputs;
           inherit unstable;
+          inherit quickshell;
+          inherit noctalia;
+          inherit spicetify-nix;
         };
       };
     };

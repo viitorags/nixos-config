@@ -27,21 +27,22 @@
       bc
       ibus
       imagemagick
+      ueberzug
       unstable.pokemon-colorscripts
     ];
 
     pointerCursor = {
       gtk.enable = true;
       x11.enable = true;
-      name = "catppuccin-macchiato-mauve-cursors";
-      package = pkgs.catppuccin-cursors.macchiatoMauve;
+      name = "catppuccin-mocha-mauve-cursors";
+      package = pkgs.catppuccin-cursors.mochaMauve;
       size = 24;
     };
 
     sessionVariables = {
-      QT_QUICK_CONTROLS_STYLE = "Kvantum";
       GTK_IM_MODULE = "ibus";
       TERMINAL = "wezterm";
+      BRAVE_USE_KEYRING = "gnome";
     };
   };
 

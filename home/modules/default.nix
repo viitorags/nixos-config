@@ -1,18 +1,17 @@
 {
   imports = [
-    ./hyprland/default.nix
+    ./programs/niri
+    ./programs/quickshell
     ./programs/fastfetch
     ./programs/wezterm
-    ./programs/swaync
+    ./programs/spotify
     ./programs/yazi
     ./programs/btop
     ./programs/zsh
     ./programs/feh
     ./programs/cava
     ./programs/zathura
-    ./programs/rofi
     ./programs/themes
-    ./programs/waybar
     ./programs/lazygit
     ./programs/coding
   ];

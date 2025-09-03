@@ -1,18 +1,19 @@
 {
   imports = [
+    ./niri.nix
+    ./portals.nix
     ./user.nix
     ./docker.nix
     ./xserver.nix
-    ./hyprland.nix
     ./pipewire.nix
     ./bluetooth.nix
     ./bootloader.nix
     ./virt-manager.nix
     ./udisk.nix
+    ./opentablet.nix
     ./sddm.nix
     ./polkit.nix
     ./kdeconnect.nix
-    ./udev.nix
     ./flatpak.nix
   ];
 }

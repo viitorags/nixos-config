@@ -9,10 +9,10 @@
   xdg.configFile = {
     "Kvantum/kvantum.kvconfig".text = ''
       [General]
-      theme=kanagawa-kvantum
+      theme=catppuccin-kvantum
     '';
 
-    "Kvantum/kanagawa-kvantum/".source = ./kanagawa-kvantum;
+    "Kvantum/catppuccin-kvantum/".source = ./catppuccin-kvantum;
 
   };
   dconf.settings = {
@@ -33,11 +33,11 @@
     enable = true;
     iconTheme = {
       name = "Papirus-Dark";
-      package = pkgs.papirus-nord;
+      package = pkgs.papirus-icon-theme;
     };
     theme = {
-      name = "Kanagawa-BL-LB";
-      package = pkgs.kanagawa-gtk-theme;
+      name = "Catppuccin-GTK-Dark";
+      package = pkgs.magnetic-catppuccin-gtk;
     };
     font = {
       name = "Sarasa Gothic CL SemiBold";

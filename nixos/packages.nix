@@ -3,15 +3,19 @@
   environment.systemPackages = with pkgs; [
     # Desktop apps
     telegram-desktop
-    discord
     obsidian
+    discord
     firefox
-    libsForQt5.ark
-    brave
+    kdePackages.ark
+    (brave.override {
+      commandLineArgs = [
+        "--password-store=gnome"
+      ];
+    })
     gparted
     mpv
-    (callPackage ./modules/huiontablet/default.nix { })
     exfatprogs
+    upower
 
     # CLI utils
     tree
@@ -24,6 +28,7 @@
     nixos-shell
     docker-compose
     qemu
+    avahi
 
     # Notifications
     libnotify
@@ -31,6 +36,7 @@
     # WM and Wayland stuff
     wayland
     xwayland
+    xwayland-satellite
     aquamarine
     wl-clipboard
     wf-recorder
@@ -40,8 +46,7 @@
     eza
     xdg-user-dirs
     xdg-utils
-    xdg-desktop-portal-hyprland
-    hyprpolkitagent
+    polkit_gnome
     libsecret
     gnome-keyring
 
@@ -60,10 +65,11 @@
     libsForQt5.qt5.qtsvg
     libsForQt5.qtstyleplugins
     libsForQt5.qt5ct
-    kdePackages.qt6ct
-    kdePackages.qtstyleplugin-kvantum
-    libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qtgraphicaleffects
+    kdePackages.qt6ct
+    # kdePackages.kirigami
+    # kdePackages.kirigami-addons
+    kdePackages.qtstyleplugin-kvantum
     cowsay
     cmatrix
   ];
