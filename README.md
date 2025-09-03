@@ -1,7 +1,7 @@
 <div align="center">
 <h1>My Nixos Config</h1>
 
-<p>My NixOs setup using <a href="">Hyprland</a></p>
+<p>My NixOs setup using <a href="https://github.com/YaLTeR/niri">Niri</a> and <a href="https://github.com/noctalia-dev/noctalia-shell">Noctalia-Shell</a></p>
 
 </div>
 
@@ -13,20 +13,13 @@
 4. [Requirements](#requirements)
 5. [Quick Start](#quick-start)
 
-## Notes
-
-> <strong>Note:</strong> Hyprlock wallpaper is changed every time you change wallpaper
-
-> <strong>Note:</strong> Digitizing table driver and installed (Huion Inspiroy H430p)
-
 ## Previews
-
 <table>
     <tr>
-        <td><img src="./.previews/1755368419_grim.png" width="1000" /></td>
+        <td><img src="./.previews/Screenshot from 2025-09-03 14-50-11.png" width="1000" /></td>
     </tr>
     <tr>
-        <td><img src="./.previews/1754670551_grim.png" width="1000" /></td>
+        <td><img src="./.previews/Screenshot from 2025-09-03 14-50-22.png" width="1000" /></td>
     </tr>
 </table>
 
@@ -35,57 +28,15 @@
 
 |Shortcut | Description |
 | --------------------------- | ------------------------------------------------------- |
-|$mainMod + Return | Opens the terminal |
-|$mainMod + Shift + Return | Opens a floating terminal with custom position and size |
+|$mainMod + Return | Opens the terminal (Wezterm) |
 |$mainMod + Q | Closes the active window |
-|$mainMod + Shift + M | Exits Hyprland |
 |$mainMod + E | Opens the file manager (Yazi) |
 |$mainMod + T | Toggles the window between floating and tiled |
-|$mainMod + R | Toggles fullscreen |
-|$mainMod + A | Opens the launcher/menu (Rofi) |
-|$mainMod + | Runs the custom power menu (Rofi) |
-|$mainMod + P | Toggles pseudo-tile mode (dwindle) |
-|$mainMod + J | Toggles horizontal/vertical split (dwindle) |
-|$mainMod + F | Opens the default browser (Brave) |
-|$mainMod + Shift + F | Opens the browser in incognito mode |
+|$mainMod + A | Opens the launcher/menu (Noctalia) |
+|$mainMod + P | Runs the custom power menu (Noctalia) |
+|$mainMod + B | Opens the default browser (Brave) |
 |$mainMod + C | Opens the default editor (Neovim) |
-|$mainMod + Shift + C | Opens the editor in a floating window |
-|$mainMod + W | Changes the wallpaper (Rofi) |
-|$mainMod + B | Restarts Waybar |
-|$mainMod + V | Manages clipboard (Rofi) |
-|Insert | Opens screenshot menu (Rofi) |
-|Ctrl + Shift + Insert | Takes a screenshot of a selected area with grim+slurp |
-
-## Dependencies
-
-- [Hyprland](https://github.com/hyprwm/Hyprland)
-- [Waybar](https://github.com/Alexays/Waybar)
-- [Rofi](https://github.com/davatorium/rofi)
-- [Wezterm](https://github.com/wezterm/wezterm)
-- [Zsh](https://www.zsh.org/) + [Oh My Zsh](https://ohmyz.sh/)
-- [Yazi](https://github.com/sxyazi/yazi)
-- [Zathura](https://pwmt.org/projects/zathura/)
-- [Swaync](https://github.com/ErikReider/SwayNotificationCenter)
-- [Sddm](https://github.com/sddm/sddm)
-- [Spicetify](https://github.com/spicetify/spicetify-cli)
-- [Neovim](https://neovim.io/)
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [Spotify](https://www.spotify.com/)
-- [Brave](https://brave.com/)
-- [Firefox](https://www.mozilla.org/firefox/)
-- [Telegram](https://desktop.telegram.org/)
-- [Lazygit](https://github.com/jesseduffield/lazygit)
-- [Git-Delta](https://github.com/dandavison/delta)
-- [Docker](https://www.docker.com/)
-- [DBeaver](https://dbeaver.io/)
-- [Obsidian](https://obsidian.md/)
-- [Krita](https://krita.org/)
-- [Discord](https://discord.com/)
-- [OpenShot](https://www.openshot.org/)
-- [PrismLauncher](https://prismlauncher.org/)
-- [MPV](https://mpv.io/)
-- [KDE Connect](https://kdeconnect.kde.org/)
-
+|$mainMod + V | Manages clipboard (Noctalia) |
 ## Requirements
 
 - Git
