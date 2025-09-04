@@ -37,11 +37,8 @@
     wayland
     xwayland
     xwayland-satellite
-    aquamarine
     wl-clipboard
-    wf-recorder
     cliphist
-    hyprcursor
     zsh
     eza
     xdg-user-dirs
@@ -55,10 +52,6 @@
     pulseaudio
     pamixer
     pavucontrol
-
-    # Screenshotting
-    grim
-    slurp
 
     # Other
     home-manager
