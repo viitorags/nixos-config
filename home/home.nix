@@ -31,14 +31,6 @@
       unstable.pokemon-colorscripts
     ];
 
-    pointerCursor = {
-      gtk.enable = true;
-      x11.enable = true;
-      name = "catppuccin-mocha-mauve-cursors";
-      package = pkgs.catppuccin-cursors.mochaMauve;
-      size = 24;
-    };
-
     sessionVariables = {
       GTK_IM_MODULE = "ibus";
       TERMINAL = "wezterm";

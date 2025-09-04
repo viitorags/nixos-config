@@ -22,6 +22,6 @@ in
     ];
 
     theme = spicePkgs.themes.text;
-    colorScheme = "CatppuccinMocha";
+    colorScheme = "Kanagawa";
   };
 }

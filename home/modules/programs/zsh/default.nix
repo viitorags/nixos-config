@@ -25,6 +25,7 @@
       pokemon-colorscripts -n pikachu -s --no-title
       export PATH="$HOME/.cache/npm/global/bin:$PATH"
       export PATH="$HOME/.nix-profile/bin:$PATH"
+      export QS_ICON_THEME="Papirus-Dark"
     '';
 
     oh-my-zsh = {

@@ -24,10 +24,8 @@ input {
     }
 }
 
-prefer-no-csd
-
 layout {
-    gaps 6
+    gaps 3.5
     
     center-focused-column "never"
 
@@ -40,18 +38,14 @@ layout {
     default-column-width { proportion 0.5; }
 
     focus-ring {
-        width 4
-
-        active-color "#7fc8ff"
-
-        inactive-color "#505050"
+        off
     }
 
     border {
         //off
 
         width 2
-        active-color "#8aadf4ff"
+        active-color "#54546D"
         inactive-color "#505050"
 
         urgent-color "#9b0000"
@@ -107,9 +101,15 @@ overview {
     zoom 0.5
 }
 
-layer-rule {
-    opacity 0.9
+gestures {
+    hot-corners {
+        off
+    }
 }
+
+// layer-rule {
+//     opacity 0.9
+// }
 
 layer-rule {
     match namespace="^quickshell-wallpaper$"
@@ -122,22 +122,22 @@ layer-rule {
 
 window-rule {
     draw-border-with-background false
-    opacity 0.9
+    // opacity 0.9
 
     focus-ring {
         width 2
-        active-color "#8839ef"
+        active-color "#54546D"
         inactive-color "#505050"
     }
 
-    border {
-        off
-    }
+    geometry-corner-radius 20
+    clip-to-geometry true
 }
 
 window-rule {
-    geometry-corner-radius 20
-    clip-to-geometry true
+    match is-active=true
+    border {
+    }
 }
 
 window-rule {

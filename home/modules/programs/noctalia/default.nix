@@ -1,6 +1,5 @@
 {
   pkgs,
-  quickshell,
   noctalia,
   ...
 }:
@@ -16,4 +15,5 @@
       }))
     ];
   };
+  xdg.configFile."noctalia/colors.json".source = ./colors.json;
 }

@@ -24,6 +24,7 @@
     php.packages.composer
     (callPackage ./php-cs-fixer.nix { })
     laravel
+    vtsls
 
     # Formatters
     nixfmt-rfc-style
@@ -35,7 +36,6 @@
     # LSP
     nodePackages.intelephense
     nodePackages.vscode-langservers-extracted
-    nodePackages.typescript-language-server
     nodePackages.eslint_d
     nodePackages.dockerfile-language-server-nodejs
     vue-language-server

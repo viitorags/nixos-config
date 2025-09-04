@@ -1,7 +1,7 @@
 {
   imports = [
     ./programs/niri
-    ./programs/quickshell
+    ./programs/noctalia
     ./programs/fastfetch
     ./programs/wezterm
     ./programs/spotify

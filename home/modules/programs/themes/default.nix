@@ -9,10 +9,10 @@
   xdg.configFile = {
     "Kvantum/kvantum.kvconfig".text = ''
       [General]
-      theme=catppuccin-kvantum
+      theme=kanagawa-kvantum
     '';
 
-    "Kvantum/catppuccin-kvantum/".source = ./catppuccin-kvantum;
+    "Kvantum/kanagawa-kvantum/".source = ./kanagawa-kvantum;
 
   };
   dconf.settings = {
@@ -29,15 +29,25 @@
     gtk-application-prefer-dark-theme=true
   '';
 
+  home = {
+    pointerCursor = {
+      gtk.enable = true;
+      x11.enable = true;
+      name = "Cursor";
+      package = pkgs.callPackage ./cursor { };
+      size = 24;
+    };
+  };
+
   gtk = {
     enable = true;
     iconTheme = {
       name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
+      package = pkgs.papirus-nord;
     };
     theme = {
-      name = "Catppuccin-GTK-Dark";
-      package = pkgs.magnetic-catppuccin-gtk;
+      name = "Kanagawa-BL-LB";
+      package = pkgs.kanagawa-gtk-theme;
     };
     font = {
       name = "Sarasa Gothic CL SemiBold";
