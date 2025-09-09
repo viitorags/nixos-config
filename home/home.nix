@@ -34,8 +34,10 @@
     sessionVariables = {
       GTK_IM_MODULE = "ibus";
       TERMINAL = "wezterm";
-      BRAVE_USE_KEYRING = "gnome";
     };
+
+    file."Pictures/Wallpapers/".source = ../assets/wallpapers;
+    file.".face".source = ../assets/profile.jpg;
   };
 
   xdg = {

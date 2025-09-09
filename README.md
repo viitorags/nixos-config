@@ -49,5 +49,5 @@ git clone https://github.com/viitorags/nixos-config.git
 cd nixos-config
 
 sudo nixos-rebuild switch --flake .#gh0stk
-home-manager switch --flake .#gh0stk
+home-manager switch --flake .
 ```

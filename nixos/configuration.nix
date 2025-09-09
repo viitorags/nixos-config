@@ -56,8 +56,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  services.auto-cpufreq.enable = true;
-  services.thermald.enable = true;
+  # services.auto-cpufreq.enable = true;
+  # services.thermald.enable = true;
 
   system.stateVersion = "25.05";
 }

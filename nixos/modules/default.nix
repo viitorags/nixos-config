@@ -7,6 +7,7 @@
     ./xserver.nix
     ./pipewire.nix
     ./bluetooth.nix
+    ./power-profile.nix
     ./bootloader.nix
     ./virt-manager.nix
     ./udisk.nix
