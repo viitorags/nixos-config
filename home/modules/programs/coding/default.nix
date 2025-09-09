@@ -4,7 +4,6 @@
     # Coding Utils
     vscodium-fhs
     unstable.dbeaver-bin
-    neovim
     gh-notify
     lazygit
     gh
