@@ -15,6 +15,11 @@
       url = "github:Gerg-L/spicetify-nix";
     };
 
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
     quickshell = {
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
@@ -31,6 +36,7 @@
       nixpkgs,
       home-manager,
       nixpkgs-unstable,
+      nixvim,
       quickshell,
       noctalia,
       spicetify-nix,
@@ -64,6 +70,7 @@
         modules = [
           ./home/home.nix
           spicetify-nix.homeManagerModules.default
+          nixvim.homeModules.nixvim
         ];
         extraSpecialArgs = {
           inherit inputs;
