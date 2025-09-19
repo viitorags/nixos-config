@@ -4,7 +4,6 @@
     ./programs/noctalia
     ./programs/fastfetch
     ./programs/wezterm
-    ./programs/nixvim
     ./programs/spotify
     ./programs/yazi
     ./programs/btop

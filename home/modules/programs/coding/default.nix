@@ -1,8 +1,14 @@
-{ pkgs, unstable, ... }:
+{
+  pkgs,
+  unstable,
+  mynvim,
+  ...
+}:
 {
   home.packages = with pkgs; [
     # Coding Utils
-    vscodium-fhs
+    mynvim.packages.${pkgs.system}.nvim
+    vscode-fhs
     unstable.dbeaver-bin
     gh-notify
     lazygit
@@ -37,7 +43,7 @@
     nodePackages.vscode-langservers-extracted
     nodePackages.eslint_d
     nodePackages.dockerfile-language-server-nodejs
-    vue-language-server
+    unstable.vue-language-server
     pyright
     emmet-ls
     bash-language-server

@@ -11,13 +11,10 @@
 
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    mynvim.url = "github:viitorags/nvim";
+
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
-    };
-
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
     quickshell = {
@@ -27,7 +24,7 @@
 
     noctalia = {
       url = "github:noctalia-dev/noctalia-shell";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };
 
@@ -36,7 +33,7 @@
       nixpkgs,
       home-manager,
       nixpkgs-unstable,
-      nixvim,
+      mynvim,
       quickshell,
       noctalia,
       spicetify-nix,
@@ -59,6 +56,7 @@
         ];
         specialArgs = {
           inherit unstable;
+          inherit inputs;
         };
       };
 
@@ -70,11 +68,11 @@
         modules = [
           ./home/home.nix
           spicetify-nix.homeManagerModules.default
-          nixvim.homeModules.nixvim
         ];
         extraSpecialArgs = {
           inherit inputs;
           inherit unstable;
+          inherit mynvim;
           inherit quickshell;
           inherit noctalia;
           inherit spicetify-nix;
