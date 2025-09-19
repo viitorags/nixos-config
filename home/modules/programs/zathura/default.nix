@@ -15,9 +15,8 @@
       rotate = "R";
       zoom-in = "K";
       zoom-out = "J";
-      # recolor = "i";
       print = "p";
-      recolor = true;
+      # recolor = true;
       recolor-keephue = true;
       render-loading = true;
 

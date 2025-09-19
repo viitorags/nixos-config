@@ -9,17 +9,17 @@
       config.enable_wayland = true
       config.enable_tab_bar = false
       config.window_close_confirmation = "NeverPrompt"
-      config.font = wezterm.font("Sarasa Mono TC", { weight = "DemiBold", italic = false })
+      config.font = wezterm.font("Sarasa Mono CL", { weight = "DemiBold", italic = false })
       config.font_rules = {
         {
           intensity = "Half",
           italic = false,
-          font = wezterm.font("Sarasa Mono TC", { weight = "Bold", stretch = "Normal" }),
+          font = wezterm.font("Sarasa Mono CL", { weight = "Bold", stretch = "Normal" }),
         },
         {
           intensity = "Half",
           italic = true,
-          font = wezterm.font("Sarasa Mono TC", { weight = "Bold", stretch = "Normal", style = "Italic" }),
+          font = wezterm.font("Sarasa Mono CL", { weight = "Bold", stretch = "Normal", style = "Italic" }),
         },
       }
       config.font_size = 12

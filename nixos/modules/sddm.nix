@@ -4,7 +4,9 @@
 }:
 let
   sddm-astronaut = pkgs.sddm-astronaut.override {
-    embeddedTheme = "hyprland_kath";
+    embeddedTheme = "purple_leaves";
+    # themeConfig = {
+    # };
   };
 in
 {

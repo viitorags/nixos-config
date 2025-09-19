@@ -25,7 +25,7 @@ input {
 }
 
 layout {
-    gaps 3.5
+    gaps 2
     
     center-focused-column "never"
 
@@ -45,7 +45,7 @@ layout {
         //off
 
         width 2
-        active-color "#54546D"
+        active-color "#957FB8"
         inactive-color "#505050"
 
         urgent-color "#9b0000"
@@ -84,7 +84,6 @@ environment {
 spawn-at-startup "dbus-update-activation-environment --systemd --all"
 spawn-at-startup "eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)"
 spawn-at-startup "systemctl --user start polkit-gnome-authentication-agent-1.service"
-// spawn-at-startup "swww-daemon"
 spawn-at-startup "noctalia-shell"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "wl-paste --type text --watch cliphist store"
@@ -122,15 +121,14 @@ layer-rule {
 
 window-rule {
     draw-border-with-background false
-    // opacity 0.9
 
     focus-ring {
         width 2
-        active-color "#54546D"
+        active-color "#957FB8"
         inactive-color "#505050"
     }
 
-    geometry-corner-radius 20
+    geometry-corner-radius 15
     clip-to-geometry true
 }
 
