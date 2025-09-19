@@ -16,10 +16,13 @@
 ## Previews
 <table>
     <tr>
-        <td><img src="./.previews/Screenshot from 2025-09-04 16-19-20.png" width="1000" /></td>
+        <td><img src="./.previews/Screenshot from 2025-09-19 18-40-50.png" width="1000" /></td>
     </tr>
     <tr>
-        <td><img src="./.previews/Screenshot from 2025-09-04 16-19-11.png" width="1000" /></td>
+        <td><img src="./.previews/Screenshot from 2025-09-19 18-21-42.png" width="1000" /></td>
+    </tr>
+    <tr>
+        <td><img src="./.previews/Screenshot from 2025-09-19 18-20-54.png" width="1000" /></td>
     </tr>
 </table>
 
