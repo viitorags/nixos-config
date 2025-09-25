@@ -157,7 +157,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: wezterm" { spawn "wezterm" "start"; }
     Mod+A hotkey-overlay-title="Run an App Launcher" { spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
     Mod+V hotkey-overlay-title="Run Clipboard" { spawn "noctalia-shell" "ipc" "call" "launcher" "clipboard"; }
-    Mod+P hotkey-overlay-title="Run Powermenu" { spawn "noctalia-shell" "ipc" "call" "powerPanel" "toggle"; }
+    Mod+P hotkey-overlay-title="Run Powermenu" { spawn "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
     Mod+C hotkey-overlay-title="Run an Application: neovim" { spawn "wezterm" "-e" "zsh" "-ic" "nvim"; }
     Mod+E hotkey-overlay-title="Run an Application: yazi" { spawn "wezterm" "start" "--" "yazi"; }
     Mod+B hotkey-overlay-title="Run an Application: brave" { spawn "brave"; }

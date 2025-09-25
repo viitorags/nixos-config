@@ -4,7 +4,7 @@
 }:
 let
   sddm-astronaut = pkgs.sddm-astronaut.override {
-    embeddedTheme = "purple_leaves";
+    embeddedTheme = "jake_the_dog";
     # themeConfig = {
     # };
   };

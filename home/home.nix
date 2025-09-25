@@ -29,6 +29,7 @@
       imagemagick
       ueberzug
       unstable.pokemon-colorscripts
+      gpu-screen-recorder
     ];
 
     sessionVariables = {
